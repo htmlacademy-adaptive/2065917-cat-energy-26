@@ -6,8 +6,12 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="./index.html"><img class="header__image" src="./img/cat-energy-logo.svg" width="34" height="38" alt="Логотип Cat Energy."></a>
-      <img class="header__lettering lettering" src="./img/cat-energy-lettering.svg" width="101" height="18" alt="Cat Energy.">
+      <a class="header__logo" href="./index.html">
+        <img class="header__image" src="./img/cat-energy-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+      </a>
+      <a class="header__logo" href="./index.html">
+        <img class="header__lettering" src="./img/header-lettering.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
       <nav class="header__menu site-navigation">
         <button class="site-navigation__button" type="button"><span class="visually-hidden">Меню.</span></button>
         <ul class="site-navigation__list">
@@ -34,15 +38,15 @@
           <fieldset class="request-form__fieldset fieldset-personal">
             <label class="fieldset-personal__label label">
               Имя:*
-              <input class="fieldset-personal__input-text" type="text" name="cat-name" placeholder="Имя Вашего кота" value="Барсик" required>
+              <input class="fieldset-personal__input-text" type="text" name="cat-name" placeholder="Барсик" required>
             </label>
             <label class="fieldset-personal__label label">
               Вес (кг):*
-              <input class="fieldset-personal__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5" placeholder="Вес Вашего кота" value="7" required>
+              <input class="fieldset-personal__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5" placeholder="7"required>
             </label>
             <label class="fieldset-personal__label label">
               Возраст (лет):
-              <input class="fieldset-personal__input-text" type="number" name="cat-age" min="1" max="30" step="1" placeholder="Возраст Вашего кота" value="7">
+              <input class="fieldset-personal__input-text" type="number" name="cat-age" min="1" max="30" step="1" placeholder="7">
             </label>
           </fieldset>
 
@@ -65,11 +69,11 @@
             <legend class="fieldset-personal__legend subheading">Контактные данные (владельца кота)</legend>
             <label class="fieldset-personal__label label">
               E-mail:*
-              <input class="fieldset-personal__input-text fieldset-personal__input-text--email" type="email" name="client_email" placeholder="Ваш e-mail" value="kuklachev@gmail.com" required>
+              <input class="fieldset-personal__input-text fieldset-personal__input-text--email" type="email" name="client_email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="fieldset-personal__label label">
               Телефон:*
-              <input class="fieldset-personal__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone" placeholder="Ваш номер телефона" value="8 (960) 900-60-90" pattern="8 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              <input class="fieldset-personal__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
 
@@ -121,7 +125,9 @@
       </section>
 
       <div class="web-contacts">
-        <img class="web-contacts__lettering lettering" src="./img/cat-energy-lettering.svg" width="128" height="24" alt="Cat Energy.">
+        <a class="web-contacts__link" href="./index.html">
+          <img class="web-contacts__lettering" src="./img/footer-lettering.svg" width="128" height="24" alt="Cat Energy.">
+        </a>
         <ul class="web-contacts__social-list social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
