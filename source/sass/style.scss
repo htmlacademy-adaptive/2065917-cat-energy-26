@@ -1,1 +1,7 @@
-// Начните писать стили здесь
+// Base
+@use "fonts.scss";
+@use "colors.scss";
+@use "./base/base.scss";
+
+
+// Blocks
