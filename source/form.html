@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>CAT ENERGY: Главная</title>
+    <title>CAT ENERGY: Подбор программы</title>
   </head>
   <body class="page__body">
     <header class="header">
@@ -28,93 +28,89 @@
       </nav>
     </header>
 
-    <main class="main">
-      <section class="hero">
-        <h1 class="hero__heading">Функциональное питание для котов</h1>
-        <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="./img/banner.png" width="280" height="270" alt="Упаковка корма Cat Energy со вкусом курицы.">
-        <a class="hero__button button" href="./form.html">Подобрать программу</a>
-      </section>
-
-      <section class="products-preview">
-        <h2 class="visually-hidden">Выберите цель для Вашего питомца.</h2>
-        <ul class="products-preview__list">
-          <li class="products-preview__item">
-            <article class="preview-card">
-              <h3 class="preview-card__title preview-card__title--slim">Похудение</h3>
-              <p class="preview-card__text">
-                Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy SLIM поможет вашему питомцу сбросить лишний вес.
-              </p>
-              <a class="preview-card__link" href="#">Каталог SLIM</a>
-            </article>
-          </li>
-          <li class="products-preview__item">
-            <article class="preview-card">
-              <h3 class="preview-card__title preview-card__title--pro">Набор массы</h3>
-              <p class="preview-card__text">
-                Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy PRO поможет вашему коту нарастить необходимые мышцы!
-              </p>
-              <a class="preview-card__link" href="#">Каталог PRO</a>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section class="feature">
-        <h2 class="feature__heading heading">Как это работает</h2>
-        <ul class="feature__list">
-          <li class="feature__item feature__item--nutricion">
-            <p class="feature__text">
-              Функциональное питание содержит только полезные питательные вещества.
-            </p>
-          </li>
-          <li class="feature__item feature__item--cooking">
-            <p class="feature__text">
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-            </p>
-          </li>
-          <li class="feature__item feature__item--diet">
-            <p class="feature__text">
-              Замените один-два приема обычной еды на наше функциональное питание.
-            </p>
-          </li>
-          <li class="feature__item feature__item--terms">
-            <p class="feature__text">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="example">
-        <h2 class="example__heading heading">Живой пример</h2>
-        <p class="example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy SLIM. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+    <main class="program-selection">
+        <h1 class="program-selection__heading">Подбор программы</h1>
+        <p class="program-selection__text">
+          Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
-        <dl class="example__data">
-          <div class="example__data-container">
-            <dt class="example__parameter">Снижение веса</dt>
-            <dd class="example__value">5 кг</dd>
-          </div>
-          <div class="example__data-container">
-            <dt class="example__parameter">Затраченои времени</dt>
-            <dd class="example__value">60 дней</dd>
-          </div>
-        </dl>
-        <div class="example__wrapper comparison">
-          <img class="comparison__image comparison__image--before" src=".img/cat-before" alt="Кот Борис до диеты.">
-          <img class="comparison__image comparison__image--after" src=".img/cat-after" alt="Кот Борис после замены своего корма на Cat Energy Slim.">
-          <div class="comparison__control">
-            <button class="comparison__button" type="button">Было</button>
-            <div class="comparison__toggle"></div>
-            <button class="comparison__button" type="button">Стало</button>
-          </div>
-        </div>
-      </section>
+
+        <form class="program-selection__form request-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="request-form__fieldset fieldset-personal">
+            <label class="fieldset-personal__label label">
+              Имя:*
+              <input class="fieldset-personal__input-text" type="text" name="cat-name" placeholder="Барсик" required>
+            </label>
+            <label class="fieldset-personal__label label">
+              Вес (кг):*
+              <input class="fieldset-personal__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5" placeholder="7"required>
+            </label>
+            <label class="fieldset-personal__label label">
+              Возраст (лет):
+              <input class="fieldset-personal__input-text" type="number" name="cat-age" min="1" max="30" step="1" placeholder="7">
+            </label>
+          </fieldset>
+
+          <fieldset class="request-form__fieldset fieldset-goal">
+            <label class="fieldset-goal__label label">
+              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
+              похудение
+            </label>
+            <label class="fieldset-goal__label label">
+              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="weight_gain">
+              набор массы
+            </label>
+            <label class="fieldset-goal__label label">
+              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="need_advice">
+              не знаю (нужен ваш совет)
+            </label>
+          </fieldset>
+
+          <fieldset class="request-form__fieldset fieldset-personal">
+            <legend class="fieldset-personal__legend subheading">Контактные данные (владельца кота)</legend>
+            <label class="fieldset-personal__label label">
+              E-mail:*
+              <input class="fieldset-personal__input-text fieldset-personal__input-text--email" type="email" name="client_email" placeholder="kuklachev@gmail.com" required>
+            </label>
+            <label class="fieldset-personal__label label">
+              Телефон:*
+              <input class="fieldset-personal__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="request-form__fieldset fieldset-comment">
+            <legend class="fieldset-comment__legend subheading">Комментарий</legend>
+            <textarea class="fieldset-comment__about" name="about_cat" wrap="soft" placeholder="Расскажите обо всех повадках кота" aria-label="Дополнительная информация о Вашем коте."></textarea>
+          </fieldset>
+
+          <fieldset class="request-form__fieldset fieldset-goods">
+            <legend class="fieldset-goods__legend subheading">Дополнительно</legend>
+            <label class="fieldset-goods__label label">
+              <input class="fieldset-goods__input-checkbox" type="checkbox" name="sweetener" checked>
+              сахарозаменитель
+            </label>
+            <label class="fieldset-goods__label label">
+              <input class="fieldset-goods__input-checkbox" type="checkbox" name="water">
+              питьевая вода
+            </label>
+            <label class="fieldset-goods__label label">
+              <input class="fieldset-goods__input-checkbox" type="checkbox" name="milk">
+              молоко
+            </label>
+            <label class="fieldset-goods__label label">
+              <input class="fieldset-goods__input-checkbox" type="checkbox" name="vitamins">
+              витамины
+            </label>
+          </fieldset>
+
+          <button class="request-form__button button" type="submit">Отправить заявку</button>
+          <p class="request-form__text">
+            * — Обязательные поля
+          </p>
+        </form>
     </main>
 
     <footer class="footer">
-      <section class="contacts contacts--accent">
+      <section class="contacts">
         <div class="contacts__address-wrapper">
           <h2 class="contacts__heading">Приглашаем к сотрудничеству дилеров!</h2>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
