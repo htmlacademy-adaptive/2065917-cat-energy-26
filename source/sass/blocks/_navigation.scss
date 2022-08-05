@@ -1,0 +1,40 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.site-navigation {
+
+}
+
+.site-navigation__button {
+  width: 34px;
+  height: 34px;
+}
+
+.site-navigation__list {
+  @include m.reset-list;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  // display: none;
+  width: 100%;
+  background-color: c.$bg-base;
+}
+
+.site-navigation__item {
+  border-top: 1px solid c.$border-lite-add;
+}
+
+.site-navigation__link {
+  @include m.reset-link;
+  display: block;
+  padding: 25px 25px;
+  font-family: v.$font-family;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: c.$txt-heading;
+}

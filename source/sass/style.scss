@@ -1,7 +1,10 @@
 // Base
-@use "fonts.scss";
-@use "colors.scss";
-@use "./base/base.scss";
-
+@use "./base/fonts";
+@use "./base/base";
 
 // Blocks
+@use "./blocks/header";
+@use "./blocks/navigation";
+@use "./blocks/button";
+@use "./blocks/hero";
+
