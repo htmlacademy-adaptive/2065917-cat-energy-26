@@ -1,0 +1,32 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.example {
+  background-color: c.$bg-block-dark;
+}
+
+.example__parameter {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.example__value {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: c.$txt-heading;
+  text-transform: uppercase;
+}
+
+.example__total {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: c.$txt-heading;
+  text-align: center;
+  text-transform: uppercase;
+}
