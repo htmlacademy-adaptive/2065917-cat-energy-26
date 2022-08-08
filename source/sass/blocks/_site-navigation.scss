@@ -2,10 +2,6 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.site-navigation {
-
-}
-
 .site-navigation__button {
   width: 34px;
   height: 34px;
@@ -20,6 +16,10 @@
   display: none;
   width: 100%;
   background-color: c.$bg-base;
+}
+
+.site-navigation__list--opened {
+  display: block;
 }
 
 .site-navigation__item {

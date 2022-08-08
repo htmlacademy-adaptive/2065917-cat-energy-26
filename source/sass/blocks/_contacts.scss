@@ -1,0 +1,39 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.contacts {
+  background-color: c.$bg-block;
+
+  &--accent {
+    background-color: c.$bg-base;
+  }
+}
+
+.contacts__heading {
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: c.$txt-heading;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font: inherit;
+  line-height: 20px;
+}
+
+.contacts__map {
+  position: relative;
+  // набросок карты
+  & .spare {
+    display: block;
+  }
+}
+
+.contacts__map-pin {
+  position: absolute;
+  top: 140px;
+  left: 135px;
+}

@@ -1,0 +1,17 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link {
+  @include m.reset-link;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: c.$txt-base;
+}

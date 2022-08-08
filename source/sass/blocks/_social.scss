@@ -2,6 +2,7 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.products-preview__list {
+.social {
   @include m.reset-list;
+  display: inline-flex;
 }
