@@ -3,16 +3,18 @@
 @use "../base/mixins" as m;
 
 .web-contacts {
+  background-color: c.$bg-block;
+}
+
+.web-contacts__list {
   @include m.reset-list;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   text-align: center;
-  background-color: c.$bg-block;
 }
 
 .web-contacts__item {
-
   &:not(:last-child)::after {
     content: "";
     display: block;
