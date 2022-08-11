@@ -9,12 +9,10 @@
     position: absolute;
     z-index: -1;
     content: "";
-    display: inline-block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom, rgba(c.$bg-accent, 0.85) 60%, c.$bg-base 60% 100%), url("../../img/hero-background.png") top/cover no-repeat;
+    display: block;
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../../img/hero-background.png") top/cover no-repeat;
   }
 }
 
@@ -22,10 +20,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 25px;
-  font-family: v.$font-family;
+  font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: v.$font-size-titel;
+  line-height: 100%;
   text-align: center;
   color: c.$txt-accent;
 }
@@ -34,10 +32,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 29px;
-  font-family: v.$font-family;
+  font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: v.$font-size-main;
+  line-height: 100%;
   text-align: center;
   text-transform: uppercase;
   color: c.$txt-accent;

@@ -1,21 +1,23 @@
 
-@use "../base/colors";
+@use "../base/colors" as c;
+@use "../base/variables" as v;
 
 .button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
   min-height: 40px;
   padding: 7px 44px;
-  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
-  line-height: 26px;
+  font-family: v.$font-oswald;
+  font-size: v.$font-size-main;
+  line-height: 129%;
   font-weight: 400;
-  color: colors.$txt-accent;
-  text-align: center;
+  color: c.$txt-accent;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: colors.$bg-accent;
+  background-color: c.$bg-accent;
   border: none;
   cursor: pointer;
 }

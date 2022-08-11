@@ -3,9 +3,9 @@
 @use "../base/mixins" as m;
 
 .heading {
-  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: v.$font-size-titel;
+  line-height: 111%;
   color: c.$txt-heading;
 }

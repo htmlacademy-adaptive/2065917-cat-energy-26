@@ -7,25 +7,25 @@
 }
 
 .example__parameter {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: v.$font-size-micro;
+  line-height: 100%;
   text-transform: lowercase;
 }
 
 .example__value {
-  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: v.$font-size-subtitel;
+  line-height: 100%;
   color: c.$txt-heading;
   text-transform: uppercase;
 }
 
 .example__total {
-  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: v.$font-size-main;
+  line-height: 143%;
   color: c.$txt-heading;
   text-align: center;
   text-transform: uppercase;
