@@ -4,9 +4,14 @@
 
 .subtitle {
   position: relative;
+  width: max-content;
   font-family: v.$font-oswald;
   font-weight: 400;
   font-size: v.$font-size-subtitle;
-  line-height: 100%;
+  line-height: 108%;
   color: c.$txt-title;
+
+  &--mod {
+    line-height: 100%;
+  }
 }
