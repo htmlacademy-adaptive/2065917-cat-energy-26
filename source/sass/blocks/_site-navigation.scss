@@ -23,18 +23,24 @@
 }
 
 .site-navigation__item {
-  border-top: 1px solid c.$border-lite-add;
+  border-bottom: 1px solid c.$border-lite-add;
+
+  &:first-child {
+    border-top: 1px solid c.$border-lite-add;
+  }
 }
 
 .site-navigation__link {
   @include m.reset-link;
   display: block;
-  padding: 25px 25px;
+  padding: 22px;
+  padding-left: v.$page-wrapper-indent;
+  padding-right: v.$page-wrapper-indent;
   font-family: v.$font-oswald;
   font-weight: 500;
   font-size: v.$font-size-menu;
   line-height: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: c.$txt-heading;
+  color: c.$txt-title;
 }

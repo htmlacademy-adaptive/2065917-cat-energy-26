@@ -1,6 +1,7 @@
 // Base
 @use "./base/fonts";
 @use "./base/base";
+@use "./base/main";
 @use "./base/page-wrapper";
 
 // Blocks
@@ -10,7 +11,7 @@
 @use "./blocks/hero";
 @use "./blocks/products-preview";
 @use "./blocks/preview-card";
-@use "./blocks/heading";
+@use "./blocks/title";
 @use "./blocks/feature";
 @use "./blocks/example";
 @use "./blocks/comparison";
@@ -18,4 +19,11 @@
 @use "./blocks/web-contacts";
 @use "./blocks/social";
 @use "./blocks/copyright";
+@use "./blocks/catalog";
+@use "./blocks/product-card";
+@use "./blocks/show-more";
+@use "./blocks/catalog-adds";
+@use "./blocks/subtitle";
+@use "./blocks/adds-card";
+@use "./blocks/order-gift";
 

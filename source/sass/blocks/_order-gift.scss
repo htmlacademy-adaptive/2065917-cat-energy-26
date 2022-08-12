@@ -1,0 +1,17 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.order-gift {
+  width: 100%;
+  min-height: calc(100vw - 30px);
+  background-color: c.$bg-accent;
+  background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../../img/gift-background.png") top/cover no-repeat;
+}
+
+.order-gift__text {
+  font-size: v.$font-size-main-big;
+  line-height: 125%;
+  color: c.$txt-accent;
+  text-align: center;
+}

@@ -2,10 +2,10 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.heading {
+.title {
   font-family: v.$font-oswald;
   font-weight: 400;
-  font-size: v.$font-size-titel;
+  font-size: v.$font-size-title;
   line-height: 111%;
-  color: c.$txt-heading;
+  color: c.$txt-title;
 }

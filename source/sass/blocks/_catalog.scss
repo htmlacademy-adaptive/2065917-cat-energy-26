@@ -1,0 +1,15 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.catalog__list {
+  @include m.reset-list;
+}
+
+.catalog__item {
+  border-top: 1px solid c.$bg-block-dark-secondary;
+
+  &:last-child {
+    border-bottom: 1px solid c.$bg-block-dark-secondary;
+  }
+}

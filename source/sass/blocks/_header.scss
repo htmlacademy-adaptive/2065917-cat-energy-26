@@ -3,9 +3,20 @@
 @use "../base/mixins" as m;
 
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   min-height: 65px;
+  background-color: c.$bg-base;
+  border-bottom: 1px solid c.$misc-line;
+
+  &--index {
+    border-bottom: none;
+  }
 }

@@ -1,0 +1,15 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+
+.main {
+  margin-top: 65px;
+}
+
+.main__title {
+  font-family: v.$font-oswald;
+  font-weight: 400;
+  font-size: v.$font-size-title;
+  line-height: 100%;
+  color: c.$txt-title;
+  background-color: c.$bg-base;
+}
