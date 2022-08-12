@@ -1,6 +1,7 @@
 @use "colors" as c;
 @use "variables" as v;
 
+*,
 *::after,
 *::before {
   box-sizing: border-box;

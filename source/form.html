@@ -29,82 +29,82 @@
       </nav>
     </header>
 
-    <main class="program-selection">
-        <h1 class="program-selection__title">Подбор программы</h1>
-        <p class="program-selection__text">
-          Заполните анкету, и мы подберем программу питания для вашего кота
-        </p>
+    <main class="main page-wrapper">
+        <h1 class="main__title title">Подбор программы</h1>
 
-        <form class="program-selection__form request-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="request-form__fieldset fieldset-personal">
-            <label class="fieldset-personal__label label">
+        <form class="main__form request-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="request-form__text">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+          <fieldset class="request-form__fieldset request-form__fieldset--personal">
+            <label class="request-form__label label">
               Имя:*
-              <input class="fieldset-personal__input-text" type="text" name="cat-name" placeholder="Барсик" required>
+              <input class="request-form__input-text" type="text" name="cat-name" placeholder="Барсик" required>
             </label>
-            <label class="fieldset-personal__label label">
+            <label class="request-form__label label">
               Вес (кг):*
-              <input class="fieldset-personal__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5" placeholder="7"required>
+              <input class="request-form__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5" placeholder="7"required>
             </label>
-            <label class="fieldset-personal__label label">
+            <label class="request-form__label label">
               Возраст (лет):
-              <input class="fieldset-personal__input-text" type="number" name="cat-age" min="1" max="30" step="1" placeholder="7">
+              <input class="request-form__input-text" type="number" name="cat-age" min="1" max="30" step="1" placeholder="7">
             </label>
           </fieldset>
 
-          <fieldset class="request-form__fieldset fieldset-goal">
-            <label class="fieldset-goal__label label">
-              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
-              похудение
-            </label>
-            <label class="fieldset-goal__label label">
-              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="weight_gain">
-              набор массы
-            </label>
-            <label class="fieldset-goal__label label">
-              <input class="fieldset-goal__input-radio" type="radio" name="goal_of_diet" value="need_advice">
-              не знаю (нужен ваш совет)
-            </label>
+          <fieldset class="request-form__fieldset request-form__fieldset--goal">
+              <label class="request-form__label label">
+                <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
+                похудение
+              </label>
+              <label class="request-form__label label">
+                <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="weight_gain">
+                набор массы
+              </label>
+              <label class="request-form__label label">
+                <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="need_advice">
+                не знаю (нужен ваш совет)
+              </label>
           </fieldset>
 
-          <fieldset class="request-form__fieldset fieldset-personal">
-            <legend class="fieldset-personal__legend subtitle">Контактные данные (владельца кота)</legend>
-            <label class="fieldset-personal__label label">
+          <fieldset class="request-form__fieldset request-form__fieldset--personal">
+            <legend class="request-form__legend subtitle">Контактные данные<br>(владельца кота)</legend>
+            <label class="request-form__label label">
               E-mail:*
-              <input class="fieldset-personal__input-text fieldset-personal__input-text--email" type="email" name="client_email" placeholder="kuklachev@gmail.com" required>
+              <input class="request-form__input-text fieldset-personal__input-text--email" type="email" name="client_email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="fieldset-personal__label label">
+            <label class="request-form__label label">
               Телефон:*
-              <input class="fieldset-personal__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone" placeholder="8 (960) 900-60-90" required>
+              <input class="request-form__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
 
-          <fieldset class="request-form__fieldset fieldset-comment">
-            <legend class="fieldset-comment__legend subtitle">Комментарий</legend>
-            <textarea class="fieldset-comment__about" name="about_cat" wrap="soft" placeholder="Расскажите обо всех повадках кота" aria-label="Дополнительная информация о Вашем коте."></textarea>
+          <fieldset class="request-form__fieldset request-form__fieldset--comment">
+            <legend class="request-form__legend subtitle">Комментарий</legend>
+            <textarea class="request-form__about" name="about_cat" wrap="soft" placeholder="Расскажите обо всех повадках кота" aria-label="Дополнительная информация о Вашем коте."></textarea>
           </fieldset>
 
-          <fieldset class="request-form__fieldset fieldset-goods">
-            <legend class="fieldset-goods__legend subtitle">Дополнительно</legend>
-            <label class="fieldset-goods__label label">
-              <input class="fieldset-goods__input-checkbox" type="checkbox" name="sweetener" checked>
+          <fieldset class="request-form__fieldset request-form__fieldset--goods">
+            <legend class="request-form__legend subtitle">Дополнительно</legend>
+            <label class="frequest-form_label label label--mod">
+              <input class="request-form__input-checkbox" type="checkbox" name="sweetener" checked>
               сахарозаменитель
             </label>
-            <label class="fieldset-goods__label label">
-              <input class="fieldset-goods__input-checkbox" type="checkbox" name="water">
+            <label class="request-form__label label label--mod">
+              <input class="request-form__input-checkbox" type="checkbox" name="water">
               питьевая вода
             </label>
-            <label class="fieldset-goods__label label">
-              <input class="fieldset-goods__input-checkbox" type="checkbox" name="milk">
+            <label class="request-form__label label label--mod">
+              <input class="request-form__input-checkbox" type="checkbox" name="milk">
               молоко
             </label>
-            <label class="fieldset-goods__label label">
-              <input class="fieldset-goods__input-checkbox" type="checkbox" name="vitamins">
+            <label class="request-form__label label label--mod">
+              <input class="request-form__input-checkbox" type="checkbox" name="vitamins">
               витамины
             </label>
           </fieldset>
 
           <button class="request-form__button button" type="submit">Отправить заявку</button>
-          <p class="request-form__text">
+          <p class="request-form__footnote">
             * — Обязательные поля
           </p>
         </form>

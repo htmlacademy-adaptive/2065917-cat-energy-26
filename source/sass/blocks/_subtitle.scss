@@ -4,9 +4,36 @@
 
 .subtitle {
   position: relative;
+  width: max-content;
   font-family: v.$font-oswald;
   font-weight: 400;
   font-size: v.$font-size-subtitle;
-  line-height: 100%;
+  line-height: 108%;
   color: c.$txt-title;
+
+  &--mod {
+    line-height: 100%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: c.$bg-accent;
+    position: absolute;
+    top: 16px;
+    left: calc(-100vw - v.$page-wrapper-indent - 2px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: c.$bg-accent;
+    position: absolute;
+    top: 16px;
+    right: calc(-100vw - v.$page-wrapper-indent - 2px);
+  }
 }
