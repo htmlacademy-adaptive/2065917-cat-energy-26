@@ -8,10 +8,6 @@
   font-family: v.$font-oswald;
   font-weight: 400;
   font-size: v.$font-size-subtitle;
-  line-height: 108%;
+  line-height: 100%;
   color: c.$txt-title;
-
-  &--mod {
-    line-height: 100%;
-  }
 }
