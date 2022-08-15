@@ -24,12 +24,13 @@
   line-height: 20px;
 }
 
+// набросок карты
 .contacts__map {
   position: relative;
-  // набросок карты
-  & .spare {
-    display: block;
-  }
+}
+
+.spare {
+  display: block;
 }
 
 .contacts__map-pin {
