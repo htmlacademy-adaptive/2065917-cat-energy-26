@@ -12,7 +12,7 @@
     display: block;
     width: 100%;
     height: 320px;
-    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../../img/hero-background.png") top/cover no-repeat;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero-background.png") top/cover no-repeat;
   }
 }
 
@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 25px;
-  font-family: v.$font-oswald;
+  font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-title;
   line-height: 100%;
@@ -32,7 +32,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 29px;
-  font-family: v.$font-oswald;
+  font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main;
   line-height: 100%;

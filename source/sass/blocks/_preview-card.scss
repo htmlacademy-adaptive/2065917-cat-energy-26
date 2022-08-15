@@ -7,7 +7,7 @@
 }
 
 .preview-card__title {
-  font-family: v.$font-oswald;
+  font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-subtitle;
   line-height: 154%;
@@ -18,7 +18,7 @@
 .preview-card__link {
   @include m.reset-link;
   display: block;
-  font-family: v.$font-oswald;
+  font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 100%;

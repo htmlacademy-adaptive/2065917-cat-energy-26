@@ -11,7 +11,7 @@
 }
 
 .contacts__title {
-  font-family: v.$font-oswald;
+  font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 125%;
@@ -24,12 +24,13 @@
   line-height: 20px;
 }
 
+// набросок карты
 .contacts__map {
   position: relative;
-  // набросок карты
-  & .spare {
-    display: block;
-  }
+}
+
+.spare {
+  display: block;
 }
 
 .contacts__map-pin {
