@@ -1,0 +1,6 @@
+@use "variables" as v;
+
+.page-wrapper {
+  padding-left: v.$page-wrapper-indent;
+  padding-right: v.$page-wrapper-indent;
+}

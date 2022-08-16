@@ -1,0 +1,13 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.comparison__thumb {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: c.$bg-base;
+  border: 2px solid c.$misc-icon;
+  border-radius: 50%;
+  cursor: pointer;
+}

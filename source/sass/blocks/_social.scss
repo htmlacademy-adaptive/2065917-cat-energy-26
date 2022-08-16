@@ -1,0 +1,8 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.social {
+  @include m.reset-list;
+  display: inline-flex;
+}

@@ -1,1 +1,30 @@
-// Начните писать стили здесь
+// Base
+@use "./base/fonts";
+@use "./base/base";
+@use "./base/main";
+@use "./base/page-wrapper";
+
+// Blocks
+@use "./blocks/header";
+@use "./blocks/site-navigation";
+@use "./blocks/button";
+@use "./blocks/hero";
+@use "./blocks/products-preview";
+@use "./blocks/preview-card";
+@use "./blocks/title";
+@use "./blocks/feature";
+@use "./blocks/example";
+@use "./blocks/comparison";
+@use "./blocks/contacts";
+@use "./blocks/web-contacts";
+@use "./blocks/social";
+@use "./blocks/copyright";
+@use "./blocks/catalog";
+@use "./blocks/product-card";
+@use "./blocks/show-more";
+@use "./blocks/catalog-adds";
+@use "./blocks/subtitle";
+@use "./blocks/adds-card";
+@use "./blocks/order-gift";
+@use "./blocks/request-form";
+@use "./blocks/label";

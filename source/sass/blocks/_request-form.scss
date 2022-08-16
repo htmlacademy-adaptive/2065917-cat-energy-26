@@ -1,0 +1,74 @@
+@use "../base/colors" as c;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.request-form {
+  background-color: c.$bg-base;
+}
+
+.request-form__text {
+  font-family: v.$font-main;
+  font-weight: 400;
+  color: c.$txt-title;
+  text-transform: uppercase;
+  background-color: c.$bg-base;
+}
+
+.request-form__legend {
+  padding: 0;
+}
+
+.request-form__fieldset {
+  @include m.reset-fieldset;
+
+  &--goal {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid c.$misc-line;
+    border-bottom: 1px solid c.$misc-line;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: v.$page-wrapper-indent;
+    padding-right: v.$page-wrapper-indent;
+  }
+
+  &--goods {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.request-form__input-text {
+  &::placeholder {
+    font-family: v.$font-main;
+    font-weight: 400;
+    font-size: v.$font-size-main-big;
+    color: c.$txt-title;
+    text-transform: uppercase;
+    background-color: c.$bg-base;
+  }
+}
+
+.request-form__about {
+  width: 100%;
+  min-height: 150px;
+  padding: 0;
+
+  &::placeholder {
+    font-family: v.$font-main;
+    font-weight: 400;
+    font-size: v.$font-size-main-big;
+    color: c.$txt-title;
+    text-transform: uppercase;
+    background-color: c.$bg-base;
+    text-align: center;
+  }
+}
+
+.request-form__footnote {
+  line-height: 114%;
+  color: c.$txt-title;
+  text-align: center;
+}
