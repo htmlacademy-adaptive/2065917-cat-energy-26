@@ -15,7 +15,39 @@
   background-color: c.$bg-base;
   border-bottom: 1px solid c.$misc-line;
 
+  @include m.response(medium) {
+    justify-content: flex-start;
+    min-height: 76px;
+    padding-top: 24px;
+  }
+
+  @include m.response(large) {
+    justify-content: flex-start;
+    min-height: 112px;
+    padding-top: 53px;
+  }
+
+
   &--index {
     border-bottom: none;
   }
+}
+
+.header__link {
+  @include m.response(medium) {
+    margin-right: 12px;
+  }
+}
+
+.header__image {
+  display: block;
+
+  @include m.response(medium) {
+    width: auto;
+    height: 59px;
+  }
+}
+
+.header__lettering {
+  display: block;
 }

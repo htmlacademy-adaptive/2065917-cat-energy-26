@@ -2,9 +2,20 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+.site-navigation {
+  @include m.response(medium) {
+    margin-left: auto;
+    align-self: flex-end;
+  }
+}
+
 .site-navigation__button {
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
+
+  @include m.response(medium) {
+    display: none;
+  }
 }
 
 .site-navigation__list {
@@ -16,6 +27,11 @@
   display: none;
   width: 100%;
   background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    position: static;
+    display: flex;
+  }
 }
 
 .site-navigation__list--opened {
@@ -23,28 +39,49 @@
 }
 
 .site-navigation__item {
-  border-bottom: 1px solid c.$border-lite-add;
+  @media (max-width: (map-get(v.$breakpoints, medium) - 1px)) {
+    border-bottom: 1px solid c.$misc-line;
 
-  &:first-child {
-    border-top: 1px solid c.$border-lite-add;
+    &:first-child {
+      border-top: 1px solid c.$misc-line;
+    }
+  }
+
+  @include m.response(medium) {
+    &:last-child {
+      margin-right: -17px;
+    }
   }
 }
 
 .site-navigation__link {
   @include m.reset-link;
   display: block;
-  padding: 22px;
-
-  @include m.response(small) {
-    padding-left: map-get(v.$indents, small);
-    padding-right: map-get(v.$indents, small);
-  }
-
   font-family: v.$font-main;
-  font-weight: 500;
-  font-size: v.$font-size-menu;
-  line-height: 100%;
-  text-align: center;
   text-transform: uppercase;
   color: c.$txt-title;
+
+  @media (max-width: map-get(v.$breakpoints, medium)) {
+    padding: 22px;
+    padding-left: map-get(v.$indents, small);
+    padding-right: map-get(v.$indents, small);
+    font-weight: 500;
+    line-height: 100%;
+    font-size: v.$font-size-menu-big;
+    text-align: center;
+  }
+
+  @include m.response(medium) {
+    font-weight: 400;
+    font-size: v.$font-size-menu;
+    line-height: 133%;
+    padding: 10px 17px;
+  }
+
+  @include m.response(large) {
+    font-weight: 400;
+    font-size: v.$font-size-menu-big;
+    line-height: 150%;
+    padding: 10px 17px;
+  }
 }
