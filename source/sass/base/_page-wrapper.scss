@@ -1,6 +1,20 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .page-wrapper {
-  padding-left: v.$page-wrapper-indent;
-  padding-right: v.$page-wrapper-indent;
+  @include m.response(small) {
+    padding-left: map-get(v.$indents, small);
+    padding-right: map-get(v.$indents, small);
+  }
+
+  @include m.response(medium) {
+    padding-left: map-get(v.$indents, medium);
+    padding-right: map-get(v.$indents, medium);
+  }
+
+  @include m.response(large) {
+    padding-left: map-get(v.$indents, large);
+    padding-right: map-get(v.$indents, large);
+  }
 }
+

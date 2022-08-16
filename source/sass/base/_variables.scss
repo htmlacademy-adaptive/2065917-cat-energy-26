@@ -7,4 +7,21 @@ $font-size-menu: 20px;
 $font-size-subtitle: 24px;
 $font-size-title: 36px;
 
-$page-wrapper-indent: 20px;
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1440px,
+);
+
+$indents: (
+  small: 20px,
+  medium: 30px,
+  large: 110px,
+);
+
+$layers: (
+  back: -1,
+  main: 0,
+  header: 1,
+  menu: 2,
+);

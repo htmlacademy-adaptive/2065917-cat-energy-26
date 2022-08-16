@@ -4,7 +4,7 @@
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: map-get(v.$layers, header);
   top: 0;
   left: 0;
   display: flex;

@@ -12,7 +12,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1;
+  z-index: map-get(v.$layers, menu);
   display: none;
   width: 100%;
   background-color: c.$bg-base;
@@ -34,8 +34,12 @@
   @include m.reset-link;
   display: block;
   padding: 22px;
-  padding-left: v.$page-wrapper-indent;
-  padding-right: v.$page-wrapper-indent;
+
+  @include m.response(small) {
+    padding-left: map-get(v.$indents, small);
+    padding-right: map-get(v.$indents, small);
+  }
+
   font-family: v.$font-main;
   font-weight: 500;
   font-size: v.$font-size-menu;
