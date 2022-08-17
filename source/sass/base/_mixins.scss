@@ -22,3 +22,9 @@
     @content;
   }
 }
+
+@mixin response-reverse($breakpoint) {
+  @media (max-width: (map-get(v.$breakpoints, $breakpoint) - 1px)) {
+    @content;
+  }
+}
