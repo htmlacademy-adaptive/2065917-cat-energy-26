@@ -36,6 +36,7 @@
 
 .contacts__map-pin {
   position: absolute;
-  top: 140px;
-  left: 135px;
+  transform: translate(-47%, -100%);
+  top: calc(53%);
+  left: calc(50%);
 }

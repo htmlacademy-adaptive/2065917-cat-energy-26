@@ -2,15 +2,21 @@
 @use "mixins" as m;
 
 .page-wrapper {
+  max-width: 576px;
+  margin: 0 auto;
   padding-left: map-get(v.$indents, small);
   padding-right: map-get(v.$indents, small);
 
   @include m.response(medium) {
+    max-width: 1080px;
+    margin: 0 auto;
     padding-left: map-get(v.$indents, medium);
     padding-right: map-get(v.$indents, medium);
   }
 
   @include m.response(large) {
+    min-width: 1440px;
+    margin: 0 auto;
     padding-left: map-get(v.$indents, large);
     padding-right: map-get(v.$indents, large);
   }

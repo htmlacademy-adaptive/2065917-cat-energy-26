@@ -7,11 +7,7 @@
   z-index: map-get(v.$layers, header);
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 65px;
+  right: 0;
   background-color: c.$bg-base;
   border-bottom: 1px solid c.$misc-line;
 
@@ -31,6 +27,15 @@
   &--index {
     border-bottom: none;
   }
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 65px;
 }
 
 .header__link {

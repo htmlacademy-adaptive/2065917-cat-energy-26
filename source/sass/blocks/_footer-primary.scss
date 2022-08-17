@@ -2,19 +2,19 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.web-contacts {
+.footer-primary {
   background-color: c.$bg-block;
 }
 
-.web-contacts__list {
-  @include m.reset-list;
+.footer-primary__list {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+  list-style-type: none;
 }
 
-.web-contacts__item {
+.footer-primary__item {
   &:not(:last-child)::after {
     content: "";
     display: block;
