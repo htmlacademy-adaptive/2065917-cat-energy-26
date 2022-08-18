@@ -4,4 +4,25 @@
 
 .products-preview__list {
   @include m.reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include m.response(large) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.products-preview__item {
+  margin-bottom: 20px;
+
+  @include m.response(medium) {
+    margin-bottom: 30px;
+  }
+
+  @include m.response(large) {
+    margin: 0;
+    width: 46.8%;
+  }
 }

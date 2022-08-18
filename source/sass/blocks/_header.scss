@@ -3,13 +3,18 @@
 @use "../base/mixins" as m;
 
 .header {
-  position: fixed;
-  z-index: map-get(v.$layers, header);
+
+
   top: 0;
   left: 0;
   right: 0;
   background-color: c.$bg-base;
   border-bottom: 1px solid c.$misc-line;
+
+  @include m.response-reverse(large) {
+    position: sticky;
+    z-index: map-get(v.$layers, header);
+  }
 
   @include m.response(medium) {
     justify-content: flex-start;
@@ -21,6 +26,7 @@
     justify-content: flex-start;
     min-height: 112px;
     padding-top: 53px;
+    background-color: transparent;
   }
 
 
@@ -49,7 +55,7 @@
 
   @include m.response(medium) {
     width: auto;
-    height: 59px;
+    height: 52px;
   }
 }
 

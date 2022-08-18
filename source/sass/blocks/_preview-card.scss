@@ -4,9 +4,11 @@
 
 .preview-card {
   background-color: c.$bg-block;
+  height: 100%;
 }
 
 .preview-card__title {
+  margin: 0;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-subtitle;

@@ -26,7 +26,10 @@
   z-index: map-get(v.$layers, menu);
   display: none;
   width: 100%;
-  background-color: c.$bg-base;
+
+  @include m.response-reverse(medium) {
+    background-color: c.$bg-base;
+  }
 
   @include m.response(medium) {
     position: static;
