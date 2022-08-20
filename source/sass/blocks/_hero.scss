@@ -23,6 +23,7 @@
 
   @include m.response(large) {
     position: static;
+    min-height: 585px;
 
     &::before {
       position: absolute;

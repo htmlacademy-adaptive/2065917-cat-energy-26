@@ -8,15 +8,19 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  min-height: 65px;
   background-color: c.$bg-base;
 
   @include m.response(medium) {
     flex-direction: row;
+    justify-content: space-between;
+    min-height: 78px;
   }
 
   @include m.response(large) {
     position: static;
+    min-height: 109px;
     background-color: transparent;
   }
 

@@ -56,5 +56,16 @@
 
   @include m.response(medium) {
     padding: 22px 0 24px 34px;
+    font-weight: 400;
+    font-size: v.$font-size-menu;
+    line-height: 133%;
+  }
+
+  @include m.response(large) {
+    padding: 22px 0 24px 34px;
+    font-weight: 400;
+    font-size: v.$font-size-menu-big;
+    line-height: 133%;
+    color: c.$txt-accent;
   }
 }
