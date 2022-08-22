@@ -13,10 +13,43 @@
   }
 }
 
-.comparison__image {
+.comparison__container {
   position: absolute;
+  width: 50%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+
+  &--after {
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+  }
+
+  &--before {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+  }
+}
+
+.comparison__image {
+  display: block;
+
+  &--after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
 }
 
 .comparison__divider {
