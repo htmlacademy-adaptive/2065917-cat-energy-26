@@ -18,15 +18,15 @@
   @include m.response(medium) {
     $container-width: 708px;
     $gap-width: 150px;
-    grid-template-columns: repeat(2, $block-width / $container-width * 100%);
-    gap: 37px ($gap-width / $container-width *100%);
+    grid-template-columns: repeat(2, calc($block-width / $container-width * 100%));
+    gap: 37px calc($gap-width / $container-width * 100%);
   }
 
   @include m.response(large) {
     $container-width: 1220px;
     $gap-width: 80px;
-    grid-template-columns: repeat(4, $block-width / $container-width * 100%);
-    gap: 37px ($gap-width / $container-width *100%);
+    grid-template-columns: repeat(4, calc($block-width / $container-width * 100%));
+    gap: 37px calc($gap-width / $container-width * 100%);
   }
 }
 
