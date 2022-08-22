@@ -8,7 +8,7 @@
   padding-right: map-get(v.$indents, small);
 
   @include m.response(medium) {
-    max-width: 1080px;
+    max-width: 1240px;
     margin: 0 auto;
     padding-left: map-get(v.$indents, medium);
     padding-right: map-get(v.$indents, medium);

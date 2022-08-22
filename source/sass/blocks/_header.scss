@@ -12,6 +12,14 @@
   min-height: 65px;
   background-color: c.$bg-base;
 
+  @include m.response-reverse(medium) {
+    border-bottom: 1px solid c.$misc-line;
+  }
+
+  &--index {
+    border-bottom: none;
+  }
+
   @include m.response(medium) {
     flex-direction: row;
     justify-content: space-between;

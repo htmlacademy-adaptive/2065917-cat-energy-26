@@ -11,13 +11,16 @@
   }
 }
 
+.contacts-wrapper {
+  position: relative;
+}
+
 .contacts__address-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: c.$bg-base;
 
   @include m.response(medium) {
     padding: 56px 70px;
@@ -27,16 +30,16 @@
     position: absolute;
     z-index: map-get(v.$layers, address);
     top: 95px;
-    // left: map-get(v.$indents, large);
-    transform: translateX(-107%);
-    left: 50%;
+    left: calc(110px + 0%);
+    // transform: translateX(-33%);
     width: 565px;
+    // width:39.24%;
     padding: 56px 80px;
+    background-color: c.$bg-base;
   }
 }
 
 .contacts__title {
-  // flex-shrink: 0;
   margin: 0;
   font-family: v.$font-main;
   font-weight: 400;
@@ -93,11 +96,6 @@
 
 .contacts__city {
   margin: 0;
-}
-
-// набросок карты
-.contacts__map {
-  position: relative;
 }
 
 .spare {
