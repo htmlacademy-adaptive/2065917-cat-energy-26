@@ -66,6 +66,13 @@
     font-weight: 400;
     font-size: v.$font-size-menu-big;
     line-height: 133%;
-    color: c.$txt-accent;
+  }
+}
+
+.site-navigation--accent {
+  & .site-navigation__link {
+    @include m.response(large) {
+      color: c.$txt-accent;
+    }
   }
 }

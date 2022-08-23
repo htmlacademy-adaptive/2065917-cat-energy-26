@@ -3,7 +3,12 @@
 @use "../base/mixins" as m;
 
 .product-card {
+  height: 100%;
   background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    background-color: c.$bg-block;
+  }
 }
 
 .product-card__link {

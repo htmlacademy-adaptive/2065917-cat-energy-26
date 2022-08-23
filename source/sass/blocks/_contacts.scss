@@ -31,9 +31,7 @@
     z-index: map-get(v.$layers, address);
     top: 95px;
     left: calc(110px + 0%);
-    // transform: translateX(-33%);
     width: 565px;
-    // width:39.24%;
     padding: 56px 80px;
     background-color: c.$bg-base;
   }

@@ -11,7 +11,7 @@
   @include m.response(medium) {
     $block-width: 324px;
     grid-template-columns: repeat(auto-fit, minmax($block-width, 1fr));
-    gap:60px;
+    gap: 60px;
   }
 
   @include m.response(large) {
@@ -22,15 +22,38 @@
 }
 
 .catalog__item {
+  position: relative;
   min-height: 190px;
-  border-top: 1px solid c.$bg-block-dark-secondary;
 
-  &:last-child {
-    border-bottom: 1px solid c.$bg-block-dark-secondary;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: c.$bg-block-dark-secondary;
+    content: "";
+  }
+
+  &:last-child::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: c.$bg-block-dark-secondary;
+    content: "";
   }
 
   @include m.response(medium) {
     min-height: 511px;
     border: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
