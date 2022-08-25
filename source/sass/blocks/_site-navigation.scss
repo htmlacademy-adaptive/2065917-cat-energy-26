@@ -41,6 +41,14 @@
 
 .site-navigation__item {
   text-align: center;
+
+  @include m.response-reverse(medium) {
+    border-top: 1px solid c.$misc-line;
+
+    &:last-child {
+      border-bottom: 1px solid c.$misc-line;
+    }
+  }
 }
 
 .site-navigation__link {

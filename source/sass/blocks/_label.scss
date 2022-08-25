@@ -3,6 +3,7 @@
 @use "../base/mixins" as m;
 
 .label {
+  display: flex;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;

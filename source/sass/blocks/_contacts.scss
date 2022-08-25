@@ -23,7 +23,7 @@
   padding-bottom: 26px;
 
   @include m.response(medium) {
-    padding: 56px 70px;
+    padding: 56px 40px;
   }
 
   @include m.response(large) {
