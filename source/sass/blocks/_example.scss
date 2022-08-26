@@ -33,9 +33,8 @@
 }
 
 .example__data {
-  $block-width: 124;
   display: grid;
-  grid-template-columns: repeat(2, $block-width * 1px);
+  grid-template-columns: repeat(2, 124px);
   grid-template-areas: "data data"
     "text text";
   gap: 15px 32px;
@@ -47,8 +46,7 @@
   }
 
   @include m.response(medium) {
-    $block-width: 162;
-    grid-template-columns: repeat(2, $block-width * 1px) 1fr;
+    grid-template-columns: repeat(2, 162px) 1fr;
     grid-template-areas: "data data text"
       "data data text";
     gap: 20px 42px;
@@ -60,8 +58,7 @@
   }
 
   @include m.response(large) {
-    $block-width: 162;
-    grid-template-columns: repeat(2, $block-width * 1px);
+    grid-template-columns: repeat(2, 162px);
     grid-template-areas: "data data"
       "text text";
     gap: 30px 42px;
@@ -148,10 +145,12 @@
 
   @include m.response(large) {
     text-align: left;
+  }
+}
 
-    & .example__price {
-      margin-left: 65px;
-    }
+.example__price {
+  @include m.response(large) {
+    margin-left: 65px; // подобрать это число в пикселях или процентах для попадания в макет
   }
 }
 

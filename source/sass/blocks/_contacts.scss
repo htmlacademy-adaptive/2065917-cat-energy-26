@@ -30,7 +30,7 @@
     position: absolute;
     z-index: map-get(v.$layers, address);
     top: 95px;
-    left: calc(110px + 0%);
+    left: map-get(v.$indents, large);
     width: 565px;
     padding: 56px 80px;
     background-color: c.$bg-base;
@@ -104,6 +104,6 @@
 .contacts__map-pin {
   position: absolute;
   transform: translate(-47%, -100%);
-  top: calc(53%);
-  left: calc(50%);
+  top: 53%;
+  left: 50%;
 }

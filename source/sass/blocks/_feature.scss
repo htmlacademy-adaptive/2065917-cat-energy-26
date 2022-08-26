@@ -13,20 +13,17 @@
   grid-template-columns: 1fr;
   gap: 20px 0;
   counter-reset: feature-counter;
-  $block-width: 250px;
 
   @include m.response(medium) {
     $container-width: 708px;
-    $gap-width: 150px;
-    grid-template-columns: repeat(2, calc($block-width / $container-width * 100%));
-    gap: 37px calc($gap-width / $container-width * 100%);
+    grid-template-columns: repeat(2, calc(250px / $container-width * 100%));
+    gap: 37px calc(150px / $container-width * 100%);
   }
 
   @include m.response(large) {
     $container-width: 1220px;
-    $gap-width: 80px;
-    grid-template-columns: repeat(4, calc($block-width / $container-width * 100%));
-    gap: 37px calc($gap-width / $container-width * 100%);
+    grid-template-columns: repeat(4, calc(250px / $container-width * 100%));
+    gap: 37px calc(80px / $container-width * 100%);
   }
 }
 

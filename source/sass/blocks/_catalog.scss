@@ -9,14 +9,12 @@
   gap: 0;
 
   @include m.response(medium) {
-    $block-width: 324px;
-    grid-template-columns: repeat(auto-fit, minmax($block-width, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     gap: 60px;
   }
 
   @include m.response(large) {
-    $block-width: 245px;
-    grid-template-columns: repeat(auto-fill, minmax($block-width, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     gap: 63px 80px;
   }
 }
