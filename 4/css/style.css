@@ -61,7 +61,7 @@
 }
 @media (min-width: 1240px) {
   .page-wrapper {
-    max-width: 1980px;
+    max-width: 1440px;
     margin: 0 auto;
     padding-left: 110px;
     padding-right: 110px;
@@ -690,7 +690,10 @@
   .example__total {
     text-align: left;
   }
-  .example__total .example__price {
+}
+
+@media (min-width: 1240px) {
+  .example__price {
     margin-left: 65px;
   }
 }
@@ -814,7 +817,7 @@
     position: absolute;
     z-index: 1;
     top: 95px;
-    left: calc(110px + 0%);
+    left: 110px;
     width: 565px;
     padding: 56px 80px;
     background-color: #ffffff;
