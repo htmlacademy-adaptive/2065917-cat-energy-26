@@ -11,7 +11,8 @@ $font-size-title-big: 60px;
 
 $breakpoints: (
   small: 320px,
-  medium: 768px,
+  // medium: 768px,
+  medium: 750px,
   // large: 1440px,
   large: 1240px,
 );
@@ -26,6 +27,6 @@ $layers: (
   back: -1,
   main: 0,
   address: 1,
-  header: 2,
-  menu: 3,
+  menu: -1,
+  header: 3,
 );
