@@ -4,32 +4,12 @@
 
 .header {
   position: sticky;
-  z-index: map-get(v.$layers, header);
   top: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 65px;
+  z-index: map-get(v.$layers, header);
   background-color: c.$bg-base;
-
-  @include m.response-reverse(medium) {
-    border-bottom: 1px solid c.$misc-line;
-  }
-
-  &--index {
-    border-bottom: none;
-  }
-
-  @include m.response(medium) {
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 78px;
-  }
 
   @include m.response(large) {
     position: static;
-    min-height: 109px;
     background-color: transparent;
   }
 
@@ -40,10 +20,51 @@
   }
 }
 
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 65px;
+  background-color: c.$bg-base;
+
+  @include m.response-reverse(medium) {
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: c.$misc-line;
+      transform: translateX(-50%);
+      content: "";
+    }
+  }
+
+  @include m.response(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 78px;
+  }
+
+  @include m.response(large) {
+    min-height: 109px;
+    background-color: transparent;
+  }
+}
+
 .header__container {
+  position: relative;
+  z-index: map-get(v.$layers, header);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
+  @include m.response(medium) {
+    justify-content: flex-start;
+    width: auto;
+  }
 }
 
 .header__button {
@@ -67,4 +88,17 @@
 
 .header__lettering {
   display: block;
+}
+
+.header__menu {
+  position: absolute;
+  z-index: map-get(v.$layers, menu);
+  top: -310%;
+  left: 0;
+  right: 0;
+
+  @include m.response(medium) {
+    position: static;
+    z-index: auto;
+  }
 }

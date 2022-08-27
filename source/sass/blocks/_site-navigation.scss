@@ -3,11 +3,11 @@
 @use "../base/mixins" as m;
 
 .site-navigation {
-  display: none;
   background-color: c.$bg-base;
+  transition: top 0.3s ease-out;
 
   @include m.response(medium) {
-    display: block;
+    position: static;
     background-color: transparent;
   }
 
@@ -16,16 +16,12 @@
   }
 
   &--nojs {
-    display: block;
+    position: static;
+    z-index: auto;
   }
 
   &--opened {
-    display: block;
-    position: absolute;
-    z-index: map-get(v.$layers, menu);
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: calc(100% - 1px);
   }
 }
 
