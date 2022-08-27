@@ -3,6 +3,7 @@
 @use "../base/mixins" as m;
 
 .site-navigation {
+  color: c.$txt-title;
   background-color: c.$bg-base;
   transition: top 0.3s ease-out;
 
@@ -55,7 +56,6 @@
   font-weight: 500;
   font-size: v.$font-size-menu-big;
   line-height: 100%;
-  color: c.$txt-title;
   text-transform: uppercase;
 
   @include m.response(medium) {
@@ -74,9 +74,8 @@
 }
 
 .site-navigation--accent {
-  & .site-navigation__link {
-    @include m.response(large) {
-      color: c.$txt-accent;
-    }
+  @include m.response(large) {
+    color: c.$txt-accent;
   }
 }
+
