@@ -5,6 +5,13 @@
 .copyright {
   display: flex;
   align-items: center;
+  color: c.$txt-base;
+
+  @include m.response(medium) {
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .copyright__link {
@@ -13,7 +20,6 @@
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 112.5%;
-  color: c.$txt-base;
 
   @include m.response(medium) {
     margin-right: 22px;
@@ -22,4 +28,12 @@
 
 .copyright__image {
   display: block;
+  color: c.$txt-base;
+  transition: color 0.1s ease-out;
+}
+
+.copyright:hover .copyright__image {
+  @include m.response(medium) {
+    color: c.$bg-accent;
+  }
 }

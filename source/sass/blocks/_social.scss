@@ -3,10 +3,35 @@
 @use "../base/mixins" as m;
 
 .social {
-  @include m.reset-list;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__item {
+  margin: 4px 12px 8px;
+}
+
+.social__link {
+  @include m.reset-link;
+  display: block;
 }
 
 .social__icon {
   display: block;
+  color: c.$txt-base;
+
+  @include m.response(medium) {
+    transition: color 0.1s ease-out;
+
+    &:hover {
+      color: c.$bg-accent;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
