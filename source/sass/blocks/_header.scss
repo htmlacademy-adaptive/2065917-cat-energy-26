@@ -44,11 +44,14 @@
   @include m.response(medium) {
     flex-direction: row;
     justify-content: space-between;
-    min-height: 78px;
+    align-items: flex-start;
+    min-height: 76px;
+    padding-top: 24px;
   }
 
   @include m.response(large) {
-    min-height: 109px;
+    min-height: 112px;
+    padding-top: 53px;
     background-color: transparent;
   }
 }
@@ -64,6 +67,15 @@
   @include m.response(medium) {
     justify-content: flex-start;
     width: auto;
+    transition: opacity 0.1s ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -82,7 +94,13 @@
   @include m.response(medium) {
     width: auto;
     height: 52px;
-    margin-right: 12px;
+    margin-right: 26px;
+  }
+
+  @include m.response(large) {
+    width: auto;
+    height: 59px;
+    margin-right: 48px;
   }
 }
 
@@ -93,12 +111,18 @@
 .header__menu {
   position: absolute;
   z-index: map-get(v.$layers, menu);
-  top: -310%;
+  top: -440%;
   left: 0;
   right: 0;
 
   @include m.response(medium) {
     position: static;
     z-index: auto;
+    flex-grow: 1;
+    max-width: 75%;
+  }
+
+  @include m.response(large) {
+    max-width: 50%;
   }
 }
