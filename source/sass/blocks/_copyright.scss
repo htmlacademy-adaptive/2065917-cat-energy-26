@@ -4,14 +4,22 @@
 
 .copyright {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .copyright__link {
   @include m.reset-link;
+  margin-right: auto;
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 112.5%;
   color: c.$txt-base;
+
+  @include m.response(medium) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__image {
+  display: block;
 }

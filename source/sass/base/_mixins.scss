@@ -1,3 +1,5 @@
+@use "../base/variables" as v;
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -13,4 +15,16 @@
   margin: 0;
   padding: 0;
   border: none;
+}
+
+@mixin response($breakpoint) {
+  @media (min-width: map-get(v.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin response-reverse($breakpoint) {
+  @media (max-width: (map-get(v.$breakpoints, $breakpoint) - 1px)) {
+    @content;
+  }
 }

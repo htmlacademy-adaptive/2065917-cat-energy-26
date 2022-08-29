@@ -2,45 +2,85 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.site-navigation__button {
-  width: 34px;
-  height: 34px;
+.site-navigation {
+  display: none;
+  background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    display: block;
+    background-color: transparent;
+  }
+
+  @include m.response(large) {
+    background-color: transparent;
+  }
+
+  &--nojs {
+    display: block;
+  }
+
+  &--opened {
+    display: block;
+    position: absolute;
+    z-index: map-get(v.$layers, menu);
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
 }
 
 .site-navigation__list {
   @include m.reset-list;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  display: none;
-  width: 100%;
-  background-color: c.$bg-base;
-}
+  display: flex;
+  flex-direction: column;
 
-.site-navigation__list--opened {
-  display: block;
+  @include m.response(medium) {
+    flex-direction: row;
+  }
 }
 
 .site-navigation__item {
-  border-bottom: 1px solid c.$border-lite-add;
+  text-align: center;
 
-  &:first-child {
-    border-top: 1px solid c.$border-lite-add;
+  @include m.response-reverse(medium) {
+    border-top: 1px solid c.$misc-line;
+
+    &:last-child {
+      border-bottom: 1px solid c.$misc-line;
+    }
   }
 }
 
 .site-navigation__link {
   @include m.reset-link;
   display: block;
-  padding: 22px;
-  padding-left: v.$page-wrapper-indent;
-  padding-right: v.$page-wrapper-indent;
+  padding: 22px 50px 24px 50px;
   font-family: v.$font-main;
   font-weight: 500;
-  font-size: v.$font-size-menu;
+  font-size: v.$font-size-menu-big;
   line-height: 100%;
-  text-align: center;
-  text-transform: uppercase;
   color: c.$txt-title;
+  text-transform: uppercase;
+
+  @include m.response(medium) {
+    padding: 22px 0 24px 34px;
+    font-weight: 400;
+    font-size: v.$font-size-menu;
+    line-height: 133%;
+  }
+
+  @include m.response(large) {
+    padding: 22px 0 24px 34px;
+    font-weight: 400;
+    font-size: v.$font-size-menu-big;
+    line-height: 133%;
+  }
+}
+
+.site-navigation--accent {
+  & .site-navigation__link {
+    @include m.response(large) {
+      color: c.$txt-accent;
+    }
+  }
 }

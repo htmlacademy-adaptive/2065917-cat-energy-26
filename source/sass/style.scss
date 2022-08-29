@@ -1,10 +1,10 @@
 // Base
 @use "./base/fonts";
 @use "./base/base";
-@use "./base/main";
 @use "./base/page-wrapper";
 
 // Blocks
+@use "./blocks/main";
 @use "./blocks/header";
 @use "./blocks/site-navigation";
 @use "./blocks/button";
@@ -16,7 +16,7 @@
 @use "./blocks/example";
 @use "./blocks/comparison";
 @use "./blocks/contacts";
-@use "./blocks/web-contacts";
+@use "./blocks/footer-primary";
 @use "./blocks/social";
 @use "./blocks/copyright";
 @use "./blocks/catalog";

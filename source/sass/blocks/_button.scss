@@ -1,12 +1,12 @@
 
 @use "../base/colors" as c;
 @use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   min-height: 40px;
   padding: 7px 44px;
   font-family: v.$font-main;

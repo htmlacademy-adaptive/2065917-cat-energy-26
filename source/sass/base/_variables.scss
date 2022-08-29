@@ -3,8 +3,29 @@ $font-main: "Oswald", "Arial", "Helvetica", sans-serif;
 $font-size-micro: 12px;
 $font-size-main: 14px;
 $font-size-main-big: 16px;
-$font-size-menu: 20px;
+$font-size-menu: 18px;
+$font-size-menu-big: 20px;
 $font-size-subtitle: 24px;
 $font-size-title: 36px;
+$font-size-title-big: 60px;
 
-$page-wrapper-indent: 20px;
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  // large: 1440px,
+  large: 1240px,
+);
+
+$indents: (
+  small: 20px,
+  medium: 30px,
+  large: 110px,
+);
+
+$layers: (
+  back: -1,
+  main: 0,
+  address: 1,
+  header: 2,
+  menu: 3,
+);

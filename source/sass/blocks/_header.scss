@@ -3,19 +3,68 @@
 @use "../base/mixins" as m;
 
 .header {
-  position: fixed;
-  z-index: 1;
+  position: sticky;
+  z-index: map-get(v.$layers, header);
   top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 65px;
   background-color: c.$bg-base;
-  border-bottom: 1px solid c.$misc-line;
+
+  @include m.response-reverse(medium) {
+    border-bottom: 1px solid c.$misc-line;
+  }
 
   &--index {
     border-bottom: none;
   }
+
+  @include m.response(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 78px;
+  }
+
+  @include m.response(large) {
+    position: static;
+    min-height: 109px;
+    background-color: transparent;
+  }
+
+  &--nojs {
+    @include m.response-reverse(medium) {
+      position: static;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  width: 24px;
+  height: 24px;
+
+  @include m.response(medium) {
+    display: none;
+  }
+}
+
+.header__image {
+  display: block;
+
+  @include m.response(medium) {
+    width: auto;
+    height: 52px;
+    margin-right: 12px;
+  }
+}
+
+.header__lettering {
+  display: block;
 }
