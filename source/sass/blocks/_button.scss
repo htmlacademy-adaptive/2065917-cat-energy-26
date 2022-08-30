@@ -7,16 +7,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
-  padding: 7px 44px;
   font-family: v.$font-main;
-  font-size: v.$font-size-main;
-  line-height: 129%;
   font-weight: 400;
   color: c.$txt-accent;
   text-decoration: none;
   text-transform: uppercase;
   background-color: c.$bg-accent;
   border: none;
+  transition: background-color 0.1s ease-out;
   cursor: pointer;
+
+  @include m.response(medium) {
+    &:hover {
+      background-color: c.$bg-accent-dark;
+    }
+
+    &:active {
+      color: rgba(c.$txt-accent, 0.3);
+      background-color: c.$bg-accent-dark;
+    }
+  }
 }

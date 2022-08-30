@@ -10,18 +10,19 @@
   margin-top: 27px;
   margin-bottom: 41px;
   font-family: v.$font-main;
+  font-size: v.$font-size-title;
   font-weight: 400;
   line-height: 100%;
   color: c.$txt-title;
 
   @include m.response(medium) {
-    font-size: v.$font-size-title-big;
-    margin-top: 64px;
+    margin-top: 65px;
     margin-bottom: 82px;
+    font-size: v.$font-size-title-big;
   }
 
   @include m.response(large) {
-    margin-top: 74px;
+    margin-top: 76px;
     margin-bottom: 84px;
   }
 }
