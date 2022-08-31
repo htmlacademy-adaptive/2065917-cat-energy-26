@@ -4,10 +4,14 @@
 
 .subtitle {
   position: relative;
-  width: max-content;
+  width: fit-content;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-subtitle;
   line-height: 100%;
   color: c.$txt-title;
+
+  @include m.response(medium) {
+    font-size: v.$font-size-title;
+  }
 }

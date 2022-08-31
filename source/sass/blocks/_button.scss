@@ -28,3 +28,19 @@
     }
   }
 }
+
+.button--more {
+  color: c.$txt-base;
+  background-color: c.$bg-block;
+
+  @include m.response(medium) {
+    &:hover {
+      background-color: c.$bg-block-dark-secondary;
+    }
+
+    &:active {
+      color: rgba(c.$txt-base, 0.3);
+      background-color: c.$bg-block-dark-secondary;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @use "../base/mixins" as m;
 
 .order-gift {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
