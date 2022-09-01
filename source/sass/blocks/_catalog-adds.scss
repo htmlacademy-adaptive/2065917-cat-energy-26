@@ -5,7 +5,6 @@
 .catalog-adds {
   margin-bottom: 35px;
   background-color: c.$bg-base;
-  overflow-x: hidden;
 
   @include m.response(medium) {
     margin-bottom: 76px;
@@ -16,12 +15,44 @@
   }
 }
 
-.catalog-adds__title {
-  margin: 0;
+.catalog-adds__title-container {
+  position: relative;
   margin-bottom: 36px;
 
-  @include m.response(medium) {
+  &::before {
+    display: block;
+    position: absolute;
+    top: 60%;
+    width: 100vw;
+    height: 2px;
+    background-color: c.$bg-accent;
+    content: "";
+  }
+
+  @include m.response (medium) {
     margin-bottom: 80px;
+  }
+}
+
+.catalog-adds__title {
+  max-width: 300px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 22px;
+  background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    max-width: 450px;
+    margin-left: 30px;
+    padding-left: 37px;
+    padding-right: 36px;
+  }
+
+  @include m.response(large) {
+    max-width: 650px;
+    margin-left: max(70px, calc(70px + (100vw - 1440px) / 2));
+    padding-left: 40px;
+    padding-right: 35px;
   }
 }
 
@@ -37,7 +68,6 @@
 
 .catalog-adds__list {
   @include m.reset-list;
-  flex-shrink: 1;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -47,8 +77,9 @@
     margin-bottom: 69px;
   }
 
-  @include m.response(largre) {
+  @include m.response(large) {
     max-width: 896px;
+    margin-bottom: 0;
   }
 }
 
@@ -79,7 +110,10 @@
 }
 
 .catalog-adds__gift {
+  flex-shrink: 0;
+
   @include m.response(large) {
     margin-left: 20px;
+    align-self: flex-start;
   }
 }
