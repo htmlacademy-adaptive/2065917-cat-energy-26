@@ -11,7 +11,7 @@
   }
 
   @include m.response(large) {
-    padding-bottom: 49px;
+    padding-bottom: calc(49px + 163px);
     border-bottom: none;
   }
 }
