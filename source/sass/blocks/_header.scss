@@ -45,7 +45,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 76px;
+    min-height: 86px;
     padding-top: 24px;
   }
 
@@ -67,6 +67,7 @@
 
   @include m.response(medium) {
     justify-content: flex-start;
+    align-self: flex-start;
     width: auto;
     transition: opacity 0.1s ease-out;
 

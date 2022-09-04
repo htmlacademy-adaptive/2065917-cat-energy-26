@@ -16,7 +16,7 @@
   color: c.$txt-title;
 
   @include m.response(medium) {
-    margin-top: 65px;
+    margin-top: 55px;
     margin-bottom: 82px;
     font-size: v.$font-size-title-big;
   }

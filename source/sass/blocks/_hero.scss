@@ -21,7 +21,7 @@ $hero-ml-l: 80px;
   }
 
   @include m.response(medium) {
-    padding-top: 64px;
+    padding-top: 54px;
     padding-bottom: 0;
 
     &::before {
@@ -136,19 +136,19 @@ $hero-ml-l: 80px;
   @include m.response(medium) {
     position: relative;
     z-index: map-get(v.$layers, back);
-    width: 709px;
-    height: 609px;
+    width: 100%;
+    height: auto;
     margin-top: -83px;
   }
 
   @include m.response(large) {
     position: absolute;
+    top: -82px;
+    left: -162px;
     z-index: map-get(v.$layers, main);
     width: 552px;
     height: 499px;
     margin: 0;
-    margin-top: -82px;
-    margin-left: -162px;
   }
 }
 
