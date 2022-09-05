@@ -41,94 +41,101 @@
   </header>
 
   <main class="main page-wrapper">
-    <h1 class="main__title">Подбор программы</h1>
+    <h1 class="main__title main__title--form">Подбор программы</h1>
     <p class="main__text">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
 
-    <form class="main__form request-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="request-form__cat-info-wrapper">
-        <fieldset class="request-form__fieldset request-form__fieldset--cat">
-          <label class="request-form__label label">
-            Имя:*
-            <input class="request-form__input-text" type="text" name="cat-name" placeholder="Барсик" required>
-          </label>
-          <label class="request-form__label label">
-            Вес (кг):*
-            <input class="request-form__input-text" type="number" name="cat-weight" min="1" max="20" step="0.5"
-              placeholder="7" required>
-          </label>
-          <label class="request-form__label label">
-            Возраст (лет):
-            <input class="request-form__input-text" type="number" name="cat-age" min="1" max="30" step="1"
-              placeholder="7">
-          </label>
+    <form class="main__form form" action="https://echo.htmlacademy.ru/" method="post">
+      <!-- данные кота -->
+      <div class="form__wrapper">
+        <!-- паспортные данные -->
+        <fieldset class="form__fieldset form__fieldset--cat">
+          <div class="form__cat-wrapper">
+            <div class="form__label-container">
+              <label class="form__label form__label--cat label" for="cat-name">Имя:*</label>
+              <input class="form__input form__input--cat input-text" type="text" name="cat-name" id="cat-name" value="Барсик" required>
+            </div>
+            <div class="form__label-container">
+              <label class="form__label form__label--weight label" for="cat-weight">Вес (кг):*</label>
+              <input class="form__input form__input--weight input-text" type="number" name="cat-weight" id="cat-weight" value="7" min="1" max="20" step="0.5" required>
+            </div>
+            <div class="form__label-container">
+              <label class="form__label form__label--age label" for="cat-age">Возраст (лет):</label>
+              <input class="form__input form__input--age input-text" type="number" name="cat-age" id="cat-age" value="7" min="1" max="30" step="1">
+            </div>
+          </div>
         </fieldset>
-        <fieldset class="request-form__fieldset request-form__fieldset--goal">
-          <label class="request-form__label label">
-            <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
-            похудение
-          </label>
-          <label class="request-form__label label">
-            <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="weight_gain">
-            набор массы
-          </label>
-          <label class="request-form__label label">
-            <input class="request-form__input-radio" type="radio" name="goal_of_diet" value="need_advice">
-            не знаю (нужен ваш совет)
-          </label>
+        <!-- цель программы -->
+        <fieldset class="form__fieldset form__fieldset--goal">
+          <div class="form__cat-wrapper">
+            <label class="form__label form__label--goal label label--accent">
+              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
+              похудение
+            </label>
+            <label class="form__label form__label--goal label label--accent">
+              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="weight_gain">
+              набор массы
+            </label>
+            <label class="form__label form__label--goal label label--accent">
+              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="need_advice">
+              не знаю (нужен ваш совет)
+            </label>
+          </div>
         </fieldset>
       </div>
 
-
-      <fieldset class="request-form__fieldset request-form__fieldset--personal">
-        <legend class="request-form__legend subtitle">Контактные данные<br>(владельца кота)</legend>
-        <div class="request-form__owner-info-wrapper">
-          <label class="request-form__label label">
+      <!-- данные владельца -->
+      <fieldset class="form__fieldset form__fieldset--personal">
+        <legend class="form__legend subtitle">Контактные данные<br>(владельца кота)</legend>
+        <div class="form__owner-info-wrapper">
+          <label class="form__label label">
             E-mail:*
-            <input class="request-form__input-text fieldset-personal__input-text--email" type="email" name="client_email"
+            <input class="form__input-text fieldset-personal__input-text--email" type="email" name="client_email"
               placeholder="kuklachev@gmail.com" required>
           </label>
-          <label class="request-form__label label">
+          <label class="form__label label">
             Телефон:*
-            <input class="request-form__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone"
+            <input class="form__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone"
               placeholder="8 (960) 900-60-90" required>
           </label>
         </div>
       </fieldset>
 
-      <fieldset class="request-form__fieldset request-form__fieldset--comment">
-        <legend class="request-form__legend subtitle">Комментарий</legend>
-        <textarea class="request-form__about" name="about_cat" wrap="soft"
+      <!-- комментарий к заказу -->
+      <fieldset class="form__fieldset form__fieldset--comment">
+        <legend class="form__legend subtitle">Комментарий</legend>
+        <textarea class="form__about" name="about_cat" wrap="soft"
           placeholder="Расскажите обо всех повадках кота"
           aria-label="Дополнительная информация о Вашем коте."></textarea>
       </fieldset>
 
-      <fieldset class="request-form__fieldset request-form__fieldset--goods">
-        <legend class="request-form__legend subtitle">Дополнительно</legend>
-        <div class="request-form__adds-info-wrapper">
-          <label class="frequest-form_label label label--mod">
-            <input class="request-form__input-checkbox" type="checkbox" name="sweetener" checked>
+      <!-- дополнительные товары -->
+      <fieldset class="form__fieldset form__fieldset--goods">
+        <legend class="form__legend subtitle">Дополнительно</legend>
+        <div class="form__adds-info-wrapper">
+          <label class="fform_label label label--mod">
+            <input class="form__input-checkbox" type="checkbox" name="sweetener" checked>
             сахарозаменитель
           </label>
-          <label class="request-form__label label label--mod">
-            <input class="request-form__input-checkbox" type="checkbox" name="water">
+          <label class="form__label label label--mod">
+            <input class="form__input-checkbox" type="checkbox" name="water">
             питьевая вода
           </label>
-          <label class="request-form__label label label--mod">
-            <input class="request-form__input-checkbox" type="checkbox" name="milk">
+          <label class="form__label label label--mod">
+            <input class="form__input-checkbox" type="checkbox" name="milk">
             молоко
           </label>
-          <label class="request-form__label label label--mod">
-            <input class="request-form__input-checkbox" type="checkbox" name="vitamins">
+          <label class="form__label label label--mod">
+            <input class="form__input-checkbox" type="checkbox" name="vitamins">
             витамины
           </label>
         </div>
       </fieldset>
-
-      <div class="request-form__button-wrapper">
-        <button class="request-form__button button" type="submit">Отправить заявку</button>
-        <p class="request-form__footnote">
+      <!-- кнопка -->
+      <div class="form__button-wrapper">
+        <button class="form__button button" type="submit">Отправить заявку</button>
+        <p class="form__footnote">
           * — Обязательные поля
         </p>
       </div>

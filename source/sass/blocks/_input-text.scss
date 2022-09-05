@@ -2,19 +2,24 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.label {
+.input-text {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 13px 15px 14px;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 112%;
   color: c.$txt-base;
   text-transform: uppercase;
+  border: 1px solid c.$border-lite;
+  border-radius: none;
+  appearance: textfield;
 
   @include m.response(medium) {
+    height: 52px;
+    padding: 11px 19px 12px;
     font-size: v.$font-size-menu-big;
-  }
-
-  &--accent {
-    color: c.$txt-base-secondary;
   }
 }
