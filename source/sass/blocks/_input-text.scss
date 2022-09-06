@@ -13,13 +13,43 @@
   line-height: 112%;
   color: c.$txt-base;
   text-transform: uppercase;
-  border: 1px solid c.$border-lite;
+  border: none;
   border-radius: none;
+  outline: none;
+  box-shadow: 0 0 0 1px c.$border-lite;
+  transition: box-shadow 0.1s ease-out;
   appearance: textfield;
+
+  &:not(:placeholder-shown) {
+    box-shadow: 0 0 0 1px c.$misc-error,
+      0 0 0 1px c.$misc-error inset;
+  }
+
+  &:valid {
+    box-shadow: 0 0 0 1px c.$border-lite;
+  }
+
+  &--disabled {
+    background-color: hsl(0, 1%, 95%);
+    pointer-events: none;
+  }
 
   @include m.response(medium) {
     height: 52px;
     padding: 11px 19px 12px;
     font-size: v.$font-size-menu-big;
+
+    &:hover {
+      box-shadow: 0 0 0 1px c.$border-base;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px c.$txt-base inset,
+        0 0 0 1px c.$txt-base;
+    }
   }
+}
+
+.input-text--disabled + label {
+  pointer-events: none;
 }

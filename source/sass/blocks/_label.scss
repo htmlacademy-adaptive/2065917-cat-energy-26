@@ -3,15 +3,17 @@
 @use "../base/mixins" as m;
 
 .label {
+  display: block;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
-  line-height: 112%;
+  line-height: 18px;
   color: c.$txt-base;
   text-transform: uppercase;
 
   @include m.response(medium) {
     font-size: v.$font-size-menu-big;
+    line-height: 150%;
   }
 
   &--accent {

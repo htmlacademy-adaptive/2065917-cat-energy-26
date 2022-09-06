@@ -1,5 +1,6 @@
 @use "colors" as c;
 @use "variables" as v;
+@use "mixins" as m;
 
 *,
 *::after,
@@ -31,4 +32,17 @@
   font-size: v.$font-size-main;
   line-height: 129%;
   color: c.$txt-base;
+}
+
+a:focus {
+  outline: none;
+
+  @include m.response(medium) {
+    outline: none;
+    box-shadow: 0 0 2px 2px c.$txt-base;
+  }
+}
+
+button:focus {
+  outline: none;
 }

@@ -26,7 +26,17 @@
       color: rgba(c.$txt-accent, 0.3);
       background-color: c.$bg-accent-dark;
     }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px c.$txt-base;
+    }
   }
+}
+
+.button--disabled {
+  background-color: hsl(hue(c.$bg-accent), 25%, 75%);
+  pointer-events: none;
 }
 
 .button--more {
@@ -42,5 +52,10 @@
       color: rgba(c.$txt-base, 0.3);
       background-color: c.$bg-block-dark-secondary;
     }
+  }
+
+  &.button--disabled {
+    opacity: 0.6;
+    pointer-events: none;
   }
 }

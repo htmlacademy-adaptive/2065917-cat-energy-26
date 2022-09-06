@@ -53,33 +53,36 @@
         <fieldset class="form__fieldset form__fieldset--cat">
           <div class="form__cat-wrapper">
             <div class="form__label-container">
+              <input class="form__input form__input--cat input-text" type="text" name="cat-name" id="cat-name" value="Барсик" placeholder=" " pattern="^[A-Za-zА-Яа-яЁё\s\d\-]+$" required>
               <label class="form__label form__label--cat label" for="cat-name">Имя:*</label>
-              <input class="form__input form__input--cat input-text" type="text" name="cat-name" id="cat-name" value="Барсик" required>
             </div>
             <div class="form__label-container">
+              <input class="form__input form__input--weight input-text" type="number" name="cat-weight" id="cat-weight" value="7" placeholder=" " min="1" max="20" step="0.5" required>
               <label class="form__label form__label--weight label" for="cat-weight">Вес (кг):*</label>
-              <input class="form__input form__input--weight input-text" type="number" name="cat-weight" id="cat-weight" value="7" min="1" max="20" step="0.5" required>
             </div>
             <div class="form__label-container">
-              <label class="form__label form__label--age label" for="cat-age">Возраст (лет):</label>
               <input class="form__input form__input--age input-text" type="number" name="cat-age" id="cat-age" value="7" min="1" max="30" step="1">
+              <label class="form__label form__label--age label" for="cat-age">Возраст (лет):</label>
             </div>
           </div>
         </fieldset>
         <!-- цель программы -->
         <fieldset class="form__fieldset form__fieldset--goal">
-          <div class="form__cat-wrapper">
-            <label class="form__label form__label--goal label label--accent">
-              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="weight_loss" checked>
-              похудение
+          <div class="form__goal-wrapper">
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice" checked>
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">похудение</span>
             </label>
-            <label class="form__label form__label--goal label label--accent">
-              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="weight_gain">
-              набор массы
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">набор массы</span>
             </label>
-            <label class="form__label form__label--goal label label--accent">
-              <input class="form__input input-radio" type="radio" name="goal_of_diet" value="need_advice">
-              не знаю (нужен ваш совет)
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">не знаю (нужен ваш совет)</span>
             </label>
           </div>
         </fieldset>
@@ -91,13 +94,13 @@
         <div class="form__owner-info-wrapper">
           <label class="form__label label">
             E-mail:*
-            <input class="form__input-text fieldset-personal__input-text--email" type="email" name="client_email"
-              placeholder="kuklachev@gmail.com" required>
+            <input class="form__input-text form__input-text--email input-text" type="email" name="client_email"
+              value="kuklachev@gmail.com" placeholder=" "  required>
           </label>
           <label class="form__label label">
             Телефон:*
-            <input class="form__input-text fieldset-personal__input-text--phone" type="tel" name="client_phone"
-              placeholder="8 (960) 900-60-90" required>
+            <input class="form__input-text form__input-text--phone input-text" type="tel" name="client_phone"
+              value="8 (960) 900-60-90" placeholder=" " pattern="^[\d\(\)\s\-]+$" required>
           </label>
         </div>
       </fieldset>
