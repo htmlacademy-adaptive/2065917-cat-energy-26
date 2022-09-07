@@ -25,11 +25,8 @@
     &:active {
       color: rgba(c.$txt-accent, 0.3);
       background-color: c.$bg-accent-dark;
-    }
-
-    &:focus {
       outline: none;
-      box-shadow: 0 0 2px 2px c.$txt-base;
+      box-shadow: none;
     }
   }
 }

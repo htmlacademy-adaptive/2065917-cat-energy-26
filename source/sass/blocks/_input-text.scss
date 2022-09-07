@@ -14,7 +14,7 @@
   color: c.$txt-base;
   text-transform: uppercase;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   outline: none;
   box-shadow: 0 0 0 1px c.$border-lite;
   transition: box-shadow 0.1s ease-out;
@@ -52,4 +52,29 @@
 
 .input-text--disabled + label {
   pointer-events: none;
+}
+
+.input-text--accent {
+  padding-right: 40px;
+  box-shadow: 0 0 0 1px c.$border-base;
+
+  &:valid {
+    box-shadow: 0 0 0 1px c.$border-base;
+  }
+
+  @include m.response(medium) {
+    height: 52px;
+    padding: 11px 19px 12px;
+    padding-right: 56px;
+    font-size: v.$font-size-menu-big;
+
+    &:hover {
+      box-shadow: 0 0 0 1px c.$border-accent;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px c.$txt-base inset,
+        0 0 0 1px c.$txt-base;
+    }
+  }
 }

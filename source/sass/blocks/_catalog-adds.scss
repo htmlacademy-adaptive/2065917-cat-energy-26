@@ -22,7 +22,7 @@
   &::before {
     display: block;
     position: absolute;
-    top: 60%;
+    top: 15px;
     width: 100vw;
     height: 2px;
     background-color: c.$bg-accent;
@@ -31,6 +31,10 @@
 
   @include m.response (medium) {
     margin-bottom: 80px;
+
+    &::before {
+      top: 20px;
+    }
   }
 }
 
