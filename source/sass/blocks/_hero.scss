@@ -2,20 +2,28 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+$hero-ml-m: 90px;
+$hero-ml-l: 80px;
+
 .hero {
   position: relative;
+  padding-top: 27px;
 
   &::before {
     position: absolute;
+    top: 0;
     z-index: map-get(v.$layers, back);
     content: "";
     display: block;
     width: 100%;
-    height: 320px;
+    height: 302px;
     background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero-background.png") top/cover no-repeat;
   }
 
   @include m.response(medium) {
+    padding-top: 54px;
+    padding-bottom: 0;
+
     &::before {
       display: none;
     }
@@ -23,7 +31,8 @@
 
   @include m.response(large) {
     position: static;
-    min-height: 585px;
+    min-height: 582px;
+    padding-top: 111px;
 
     &::before {
       position: absolute;
@@ -54,6 +63,7 @@
   }
 
   @include m.response(large) {
+    position: relative;
     grid-template-areas: "title image"
       "slogan image"
       "button image";
@@ -74,8 +84,17 @@
   color: c.$txt-accent;
 
   @include m.response(medium) {
+    width: 450px;
+    margin-left: $hero-ml-m;
+    margin-bottom: 41px;
+    font-size: v.$font-size-title-big;
     text-align: left;
     color: c.$txt-title;
+  }
+
+  @include m.response(large) {
+    margin-left: $hero-ml-l;
+    margin-bottom: 40px;
   }
 }
 
@@ -93,25 +112,42 @@
   color: c.$txt-accent;
 
   @include m.response(medium) {
+    margin-left: $hero-ml-m;
+    margin-bottom: 49px;
+    font-size: v.$font-size-menu-big;
     text-align: left;
     color: c.$txt-title;
+  }
+
+  @include m.response(large) {
+    margin-left: $hero-ml-l;
+    margin-bottom: 52px;
   }
 }
 
 .hero__image {
   grid-area: image;
   display: block;
+  width: 280px;
+  height: 270px;
   margin: 0 auto;
+  margin-bottom: 3px;
 
   @include m.response(medium) {
     position: relative;
     z-index: map-get(v.$layers, back);
-    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    margin-top: -83px;
   }
 
   @include m.response(large) {
-    position: relative;
+    position: absolute;
+    top: -82px;
+    left: -162px;
     z-index: map-get(v.$layers, main);
+    width: 552px;
+    height: 499px;
     margin: 0;
   }
 }
@@ -119,8 +155,19 @@
 .hero__button {
   grid-area: button;
   width: 100%;
+  padding: 11px;
+  font-size: v.$font-size-main;
+  line-height: 128%;
 
   @include m.response(medium) {
     width: 244px;
+    margin-left: $hero-ml-m;
+    padding: 17px;
+    font-size: v.$font-size-menu-big;
+    line-height: 100%;
+  }
+
+  @include m.response(large) {
+    margin-left: $hero-ml-l;
   }
 }

@@ -2,9 +2,27 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+.feature {
+  padding-bottom: 49px;
+
+  @include m.response(medium) {
+    padding-bottom: 47px;
+    border-bottom: 1px solid c.$border-lite-add;
+  }
+
+  @include m.response(large) {
+    padding-bottom: calc(49px + 163px);
+    border-bottom: none;
+  }
+}
+
 .feature__title {
+  margin: 0;
   margin-bottom: 40px;
-  color: c.$txt-title;
+
+  @include m.response(medium) {
+    margin-bottom: 32px;
+  }
 }
 
 .feature__list {
@@ -38,12 +56,31 @@
     width: 60px;
     height: 60px;
     background-color: c.$bg-accent;
+    background-position: center;
+    background-repeat: no-repeat;
     content: "";
   }
 
+  &--nutricion::before {
+    background-image: url("./../img/icons/icon_nutricion.svg");
+  }
+
+  &--cooking::before {
+    background-image: url("./../img/icons/icon_cooking.svg");
+  }
+
+  &--diet::before {
+    background-image: url("./../img/icons/icon_diet.svg");
+  }
+
+  &--terms::before {
+    background-image: url("./../img/icons/icon_terms.svg");
+  }
+
   @include m.response(medium) {
-    min-height: 280px;
     flex-direction: column;
+    min-height: 280px;
+    padding-top: 40px;
 
     &::before {
       width: 80px;
@@ -69,4 +106,12 @@
 
 .feature__text {
   margin: 0;
+  margin-left: 20px;
+
+  @include m.response(medium) {
+    margin-left: 0;
+    margin-top: 31px;
+    font-size: v.$font-size-main-big;
+    line-height: 150%;
+  }
 }

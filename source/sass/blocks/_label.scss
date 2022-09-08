@@ -3,14 +3,24 @@
 @use "../base/mixins" as m;
 
 .label {
-  display: flex;
+  display: block;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
-  line-height: 112%;
+  line-height: 18px;
+  color: c.$txt-base;
   text-transform: uppercase;
 
-  &--mod {
+  @include m.response(medium) {
+    font-size: v.$font-size-menu-big;
+    line-height: 150%;
+  }
+
+  &--accent {
+    color: c.$txt-base-secondary;
+  }
+
+  &--add {
     color: c.$txt-title;
   }
 }

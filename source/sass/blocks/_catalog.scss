@@ -2,11 +2,23 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+.catalog {
+  margin-bottom: 36px;
+
+  @include m.response(medium) {
+    margin-bottom: 68px;
+  }
+
+  @include m.response(large) {
+    margin-bottom: 76px;
+  }
+}
+
 .catalog__list {
   @include m.reset-list;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: 19px;
 
   @include m.response(medium) {
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
@@ -21,11 +33,10 @@
 
 .catalog__item {
   position: relative;
-  min-height: 190px;
 
   &::before {
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
@@ -36,7 +47,7 @@
 
   &:last-child::after {
     position: absolute;
-    bottom: 0;
+    bottom: -11px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
@@ -46,9 +57,6 @@
   }
 
   @include m.response(medium) {
-    min-height: 511px;
-    border: none;
-
     &::before,
     &::after {
       display: none;

@@ -3,11 +3,12 @@
 @use "../base/mixins" as m;
 
 .site-navigation {
-  display: none;
+  color: c.$txt-title;
   background-color: c.$bg-base;
+  transition: top 0.3s ease-out;
 
   @include m.response(medium) {
-    display: block;
+    position: static;
     background-color: transparent;
   }
 
@@ -16,16 +17,12 @@
   }
 
   &--nojs {
-    display: block;
+    position: static;
+    z-index: auto;
   }
 
   &--opened {
-    display: block;
-    position: absolute;
-    z-index: map-get(v.$layers, menu);
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: calc(100% - 1px);
   }
 }
 
@@ -36,6 +33,8 @@
 
   @include m.response(medium) {
     flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 }
 
@@ -49,6 +48,14 @@
       border-bottom: 1px solid c.$misc-line;
     }
   }
+
+  @include m.response(medium) {
+    margin-left: 36px;
+  }
+
+  @include m.response(large) {
+    margin-left: 34px;
+  }
 }
 
 .site-navigation__link {
@@ -59,28 +66,49 @@
   font-weight: 500;
   font-size: v.$font-size-menu-big;
   line-height: 100%;
-  color: c.$txt-title;
   text-transform: uppercase;
 
   @include m.response(medium) {
-    padding: 22px 0 24px 34px;
+    position: relative;
+    padding: 18px 0 10px;
     font-weight: 400;
     font-size: v.$font-size-menu;
     line-height: 133%;
+    transition: opacity 0.1s ease-out;
+
+    &--current::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: c.$bg-accent;
+      content: "";
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @include m.response(large) {
-    padding: 22px 0 24px 34px;
+    padding: 10px 0 10px;
     font-weight: 400;
     font-size: v.$font-size-menu-big;
-    line-height: 133%;
+    line-height: 150%;
   }
 }
 
 .site-navigation--accent {
-  & .site-navigation__link {
-    @include m.response(large) {
-      color: c.$txt-accent;
+  @include m.response(large) {
+    color: c.$txt-accent;
+
+    .site-navigation__link--current::after {
+      background-color: c.$bg-base;
     }
   }
 }

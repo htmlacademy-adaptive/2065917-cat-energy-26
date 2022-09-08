@@ -3,7 +3,61 @@
 @use "../base/mixins" as m;
 
 .catalog-adds {
+  margin-bottom: 35px;
   background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    margin-bottom: 76px;
+  }
+
+  @include m.response(large) {
+    margin-bottom: 86px;
+  }
+}
+
+.catalog-adds__title-container {
+  position: relative;
+  margin-bottom: 36px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 15px;
+    width: 100vw;
+    height: 2px;
+    background-color: c.$bg-accent;
+    content: "";
+  }
+
+  @include m.response (medium) {
+    margin-bottom: 80px;
+
+    &::before {
+      top: 20px;
+    }
+  }
+}
+
+.catalog-adds__title {
+  max-width: 300px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 22px;
+  background-color: c.$bg-base;
+
+  @include m.response(medium) {
+    max-width: 450px;
+    margin-left: 30px;
+    padding-left: 37px;
+    padding-right: 36px;
+  }
+
+  @include m.response(large) {
+    max-width: 650px;
+    margin-left: max(70px, calc(70px + (100vw - 1440px) / 2));
+    padding-left: 40px;
+    padding-right: 35px;
+  }
 }
 
 .catalog-adds__wrapper {
@@ -12,42 +66,58 @@
 
   @include m.response(large) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .catalog-adds__list {
   @include m.reset-list;
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin-bottom: 35px;
+
+  @include m.response(medium) {
+    margin-bottom: 69px;
+  }
+
+  @include m.response(large) {
+    max-width: 896px;
+    margin-bottom: 0;
+  }
 }
 
 .catalog-adds__item {
-  position: relative;
+  border-top: 1px solid c.$border-base;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 1px;
-    background-color: c.$bg-block-dark-secondary;
-    content: "";
+  &:last-child {
+    border-bottom: 1px solid c.$border-base;
   }
 
-  &:last-child::after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 1px;
-    background-color: c.$bg-block-dark-secondary;
-    content: "";
+  @include m.response(medium) {
+    border: 1px solid c.$border-base;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid c.$border-base;
+    }
+  }
+
+  @include m.response(large) {
+    border: none;
+    border-top: 1px solid c.$border-base;
+
+    &:last-child {
+      border-bottom: 1px solid c.$border-base;
+    }
   }
 }
 
 .catalog-adds__gift {
+  flex-shrink: 0;
+
   @include m.response(large) {
-    margin-left: 80px;
+    margin-left: 20px;
+    align-self: flex-start;
   }
 }
