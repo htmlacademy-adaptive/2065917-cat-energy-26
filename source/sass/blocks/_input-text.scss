@@ -18,7 +18,7 @@
   outline: none;
   box-shadow: 0 0 0 1px c.$border-lite;
   transition: box-shadow 0.1s ease-out;
-  appearance: textfield;
+  appearance: none;
 
   &:not(:placeholder-shown) {
     box-shadow: 0 0 0 1px c.$misc-error,
