@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>CAT ENERGY: Подбор программы</title>
+  <base href="https://htmlacademy-adaptive.github.io/2065917-cat-energy-26/5/">
+</head>
+
+<body class="page__body">
+  <header class="header header--nojs">
+    <div class="header__wrapper page-wrapper">
+      <div class="header__container">
+        <a class="header__link" href="./index.html">
+          <img class="header__image" src="./img/cat-energy-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+        </a>
+        <a class="header__link" href="./index.html">
+          <img class="header__lettering" src="./img/header-lettering.svg" width="101" height="18" alt="Cat Energy.">
+        </a>
+        <button class="header__button menu-button" type="button">
+          <span class="visually-hidden">Меню.</span>
+          <div class="menu-button__E"></div>
+          <div class="menu-button__X"></div>
+        </button>
+      </div>
+      <nav class="header__menu site-navigation site-navigation--nojs">
+        <ul class="site-navigation__list" role="menubar">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="./index.html">Главная</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link site-navigation__link--current" href="./form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main page-wrapper">
+    <h1 class="main__title main__title--form">Подбор программы</h1>
+    <p class="main__text">
+      Заполните анкету, и мы подберем программу питания для вашего кота
+    </p>
+
+    <form class="main__form form" action="https://echo.htmlacademy.ru/" method="post">
+      <!-- данные кота -->
+      <div class="form__wrapper">
+        <!-- паспортные данные -->
+        <fieldset class="form__fieldset form__fieldset--cat">
+          <div class="form__cat-wrapper">
+            <div class="form__label-container">
+              <input class="form__input form__input--cat input-text" type="text" name="cat-name" id="cat-name" value="Барсик" placeholder=" " pattern="^[A-Za-zА-Яа-яЁё\s\d\-]+$" required>
+              <label class="form__label form__label--cat label" for="cat-name">Имя:*</label>
+            </div>
+            <div class="form__label-container">
+              <input class="form__input form__input--weight input-text" type="number" name="cat-weight" id="cat-weight" value="7" placeholder=" " min="1" max="20" step="0.1" required>
+              <label class="form__label form__label--weight label" for="cat-weight">Вес (кг):*</label>
+            </div>
+            <div class="form__label-container">
+              <input class="form__input form__input--age input-text" type="number" name="cat-age" id="cat-age" value="7" min="1" max="30" step="1">
+              <label class="form__label form__label--age label" for="cat-age">Возраст (лет):</label>
+            </div>
+          </div>
+        </fieldset>
+        <!-- цель программы -->
+        <fieldset class="form__fieldset form__fieldset--goal">
+          <div class="form__goal-wrapper">
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice" checked>
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">похудение</span>
+            </label>
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">набор массы</span>
+            </label>
+            <label class="form__label form__label--goal custom-radio">
+              <input class="custom-radio__input visually-hidden" type="radio" name="goal_of_diet" value="need_advice">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label label label--accent">не знаю (нужен ваш совет)</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- данные владельца -->
+      <fieldset class="form__fieldset form__fieldset--personal">
+        <div class="form__legend-container">
+          <legend class="form__legend subtitle">Контактные данные<br>(владельца кота)</legend>
+        </div>
+        <div class="form__owner-info-wrapper">
+          <div class="form__label-container">
+            <input class="form__input form__input--email input-text input-text--accent" type="email" name="client_email" id="client_email" value="kuklachev@gmail.com" placeholder=" "  required>
+            <label class="form__label form__label--email label" for="client_email">E-mail:*</label>
+            <div class="form__input-icon form__input-icon--email">
+              <svg class="form__input-img" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.18955" y1="6" x2="1.18955" y2="14" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="18.1896" y1="6" x2="18.1896" y2="14" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="0.539551" y1="13.35" x2="18.5396" y2="13.35" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="0.539551" y1="1.35" x2="18.5396" y2="1.35" stroke="currentColor" stroke-width="1.3"/>
+                <path d="M17.8896 3.1821L9.53957 9.67654L1.18955 3.18209V1.65H4.03955L9.53957 1.65H14.5396H17.8896V3.1821Z" stroke="currentColor" stroke-width="1.3"/>
+                </svg>
+            </div>
+          </div>
+          <div class="form__label-container">
+            <input class="form__input form__input--phone input-text input-text--accent" type="tel" name="client_phone" id="client_phone" value="8 (960) 900-60-90" placeholder=" " pattern="^[\d\(\)\s\-]+$" required>
+            <label class="form__label form__label--phone label" for="client_phone">Телефон:*</label>
+            <div class="form__input-icon form__input-icon--phone">
+              <svg class="form__input-img" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2403_1625)">
+                <path d="M17.7561 9.4H9.61816V10.6H17.7561L15.7455 12.7L16.6072 13.6L19.5752 10.5C19.6684 10.3702 19.7188 10.2123 19.7188 10.05C19.7188 9.88772 19.6684 9.72982 19.5752 9.6L16.6072 6.5L15.7455 7.4L17.7561 9.4Z" fill="currentColor"/>
+                <path d="M8.37362 19.4V13.2C8.36256 13.0447 8.29849 12.8987 8.19306 12.7886C8.08763 12.6785 7.94786 12.6116 7.79917 12.6H3.5866C3.59153 12.9167 3.71415 13.2189 3.92855 13.4428C4.14295 13.6668 4.43232 13.7949 4.73548 13.8H7.12899V18.8H3.5866C3.35992 18.8149 3.13268 18.7825 2.91809 18.7048C2.70349 18.6271 2.50582 18.5057 2.33656 18.3475C2.1673 18.1893 2.02983 17.9976 1.93215 17.7834C1.83446 17.5693 1.7785 17.337 1.76753 17.1V3.10001C1.75968 2.6373 1.92564 2.18977 2.22987 1.85331C2.5341 1.51686 2.95238 1.31824 3.39512 1.30001H7.12899V6.30001H4.83122C4.52806 6.30516 4.23869 6.43324 4.02429 6.65718C3.80989 6.88112 3.68727 7.18336 3.68234 7.50001H7.89491C8.0436 7.48846 8.18337 7.42154 8.2888 7.31142C8.39423 7.2013 8.4583 7.05531 8.46936 6.90001V0.600012C8.42369 0.443872 8.33642 0.304534 8.21775 0.198285C8.09907 0.0920352 7.95389 0.0232649 7.79917 1.23734e-05H3.5866C3.20936 -0.0133408 2.8333 0.0511002 2.47993 0.189651C2.12655 0.328202 1.80279 0.538145 1.52714 0.807477C1.2515 1.07681 1.02939 1.40025 0.8735 1.7593C0.717613 2.11835 0.631012 2.50598 0.618647 2.90001V16.8C0.590902 17.1977 0.642233 17.597 0.769411 17.9729C0.89659 18.3489 1.09686 18.6932 1.35764 18.9844C1.61841 19.2756 1.93405 19.5072 2.28469 19.6648C2.63534 19.8224 3.0134 19.9024 3.39512 19.9H7.79917C7.86953 19.915 7.94222 19.9133 8.01186 19.895C8.0815 19.8767 8.1463 19.8423 8.20147 19.7942C8.25664 19.7462 8.30075 19.6859 8.33055 19.6176C8.36035 19.5494 8.37507 19.475 8.37362 19.4Z" fill="currentColor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_2403_1625">
+                <rect width="19.1481" height="20" fill="white" transform="translate(0.618652)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- комментарий к заказу -->
+      <fieldset class="form__fieldset form__fieldset--comment">
+        <div class="form__legend-container">
+          <legend class="form__legend subtitle">Комментарий</legend>
+        </div>
+        <textarea class="form__input form__input--comment" name="about_cat" wrap="soft"
+          placeholder="Расскажите обо всех повадках кота"
+          aria-label="Дополнительная информация о Вашем коте."></textarea>
+      </fieldset>
+
+      <!-- дополнительные товары -->
+      <fieldset class="form__fieldset form__fieldset--adds">
+        <div class="form__legend-container">
+          <legend class="form__legend subtitle">Дополнительно</legend>
+        </div>
+        <div class="form__adds-info-wrapper">
+          <label class="form__label form__label--adds custom-checkbox">
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label label label--add">сахарозаменитель</span>
+          </label>
+          <label class="form__label form__label--adds custom-checkbox">
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="water">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label label label--add">питьевая вода</span>
+          </label>
+          <label class="form__label form__label--adds custom-checkbox">
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="milk">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label label label--add">молоко</span>
+          </label>
+          <label class="form__label form__label--adds custom-checkbox">
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="vitamin">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label label label--add">витамины</span>
+          </label>
+        </div>
+      </fieldset>
+      <!-- кнопка -->
+      <div class="form__button-wrapper">
+        <button class="form__button button" type="submit">Отправить заявку</button>
+        <p class="form__footnote">
+          * — Обязательные поля
+        </p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+
+    <section class="contacts">
+      <div class="contacts-wrapper page-wrapper">
+        <div class="contacts__address-wrapper">
+          <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+          <address class="contacts__address">
+            <p class="contacts__street">ул. Большая<br>Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716161165!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661035919798!5m2!1sru!2sru" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <div class="footer-primary">
+      <ul class="footer-primary__list page-wrapper">
+        <li class="footer-primary__item">
+          <a class="footer-primary__link" href="./index.html">
+            <img class="footer-primary__lettering" src="./img/footer-lettering.svg" width="128" height="24" alt="Cat Energy.">
+          </a>
+        </li>
+        <li class="footer-primary__item">
+          <ul class="footer-primary__social-list social">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+                <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 5.34c0-.86.52-1.32 1.55-1.38l3.97.02c.26 0 .44.13.53.38.4 1.26.86 2.34 1.37 3.25.5.92 1.17 1.97 1.99 3.16.07.15.18.23.34.23.13 0 .22-.06.3-.18l.07-.28.03-4.35c0-.3-.07-.5-.23-.6-.15-.1-.43-.18-.83-.23-.32-.05-.48-.23-.48-.55 0-.07 0-.12.02-.15.38-1.09 1.44-1.63 3.2-1.63l1.5-.03c.67 0 1.23.16 1.67.48.44.32.67.82.67 1.5v5.72c.12.08.24.12.34.12.27 0 .5-.15.7-.45 1.95-2.58 3-4.31 3.17-5.18 0-.02.01-.06.05-.13.12-.25.33-.47.61-.65.29-.19.53-.31.75-.38a.55.55 0 0 1 .24-.05h4.13l.26.03c.36 0 .63.16.83.47.07.1.12.21.15.33a2.4 2.4 0 0 1 .06.55v.18a6.11 6.11 0 0 1-.94 2.2c-.5.78-1.15 1.62-1.93 2.53-.79.9-1.27 1.5-1.47 1.78-.16.2-.24.39-.24.56 0 .13.07.28.21.45l3.9 4.63c.2.26.31.56.31.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.14.43l-.46.02h-4.04c-.02 0-.06 0-.11.02a.86.86 0 0 1-.1.01c-.4 0-.76-.16-1.1-.48-.12-.13-.96-1.12-2.5-2.97a1.39 1.39 0 0 0-.38-.32 38.47 38.47 0 0 0-.53 2.24l-.08.42a1.4 1.4 0 0 1-1.12 1.06l-.37.02h-2.61c-1.48 0-2.95-.63-4.41-1.9a19.3 19.3 0 0 1-3.96-4.95 47.51 47.51 0 0 1-3.28-7.05A1.92 1.92 0 0 1 1 5.34Zm16.01 6.51c-.37 0-.7-.1-1.01-.29a.9.9 0 0 1-.45-.79V5c0-.34-.1-.58-.27-.72-.18-.14-.49-.21-.93-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.17.93 1.17 1.71v4.43a1.5 1.5 0 0 1-.53 1.04c-.32.28-.68.42-1.07.42-.53 0-.94-.24-1.22-.73a26.16 26.16 0 0 1-3.1-5.63l-.23-.66-3.55-.02c-.23 0-.36.01-.38.03-.03.03-.04.1-.04.22 0 .15.01.3.05.48l.56 1.4c1.49 3.64 3.11 6.51 4.86 8.6 1.75 2.1 3.47 3.15 5.16 3.15h2.66c.1 0 .19-.03.24-.09.05-.06.1-.17.13-.34l.06-.25.5-2.21c.15-.3.27-.5.38-.6.2-.2.42-.28.69-.28.43 0 .86.24 1.3.73l2.27 2.71c.14.22.3.33.45.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 0 0-.08-.25l-3.87-4.55c-.3-.35-.45-.73-.45-1.13 0-.4.14-.8.43-1.16.23-.34.68-.9 1.34-1.67.67-.78 1.25-1.51 1.75-2.19.5-.68.82-1.3.98-1.85l.08-.33a.37.37 0 0 1-.02-.16c0-.07-.01-.14-.03-.19h-4.18c-.27.1-.48.25-.64.45L21.8 6c-.45 1.16-1.6 2.94-3.5 5.36-.36.33-.8.5-1.3.5Z"/>
+                </svg>
+                  <span class="visually-hidden">В Контакте.</span>
+                </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
+                <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m17.85 10.8-5.24-3.5a.65.65 0 0 0-1.01.55v6.98a.65.65 0 0 0 1.01.54l5.24-3.49a.65.65 0 0 0 0-1.09Zm-4.94 2.8V9.08l3.4 2.27-3.4 2.27Zm12.48-8.56a2.4 2.4 0 0 0-1.45-1.63C20.22 1.98 14.25 2 14 2s-6.22-.02-9.94 1.4a2.4 2.4 0 0 0-1.45 1.64 25.32 25.32 0 0 0-.61 6.3c0 3.26.33 5.22.61 6.3a2.4 2.4 0 0 0 1.45 1.63c3.72 1.43 9.69 1.4 9.94 1.4h.08c.75 0 6.31-.04 9.86-1.4a2.4 2.4 0 0 0 1.45-1.64c.28-1.07.61-3.03.61-6.3 0-3.25-.33-5.22-.61-6.29Zm-1.27 12.27a1.1 1.1 0 0 1-.65.74c-3.5 1.34-9.4 1.32-9.47 1.32-.07 0-5.98.02-9.47-1.32a1.09 1.09 0 0 1-.65-.74c-.27-1-.57-2.85-.57-5.97 0-3.12.3-4.97.57-5.97a1.1 1.1 0 0 1 .65-.74C8.03 3.29 13.93 3.3 14 3.3c.07 0 5.98-.02 9.47 1.32a1.1 1.1 0 0 1 .65.74c.27 1 .57 2.85.57 5.97 0 3.12-.3 4.96-.57 5.97Z"/>
+                </svg>
+                <span class="visually-hidden">YouTube.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
+                <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.46 3.15c.18.15.27.38.23.61l-2.63 15.76a.66.66 0 0 1-1.01.44l-7.88-5.25a.66.66 0 0 1-.15-.96l2.61-3.26-4.36 2.9a.66.66 0 0 1-.65.05L4.36 10.8a.66.66 0 0 1 .08-1.2l18.38-6.57a.66.66 0 0 1 .64.11ZM6.33 10.32l3.53 1.77 7.56-5.04a.66.66 0 0 1 .88.96l-4.8 6 6.43 4.3 2.28-13.66-15.88 5.67Z"/>
+                </svg>
+                  <span class="visually-hidden">Telegram.</span>
+                </a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-primary__item">
+          <div class="footer-primary__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="copyright__image" role="img" aria-label="Логотип HTML Academy." fill="currentColor" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
