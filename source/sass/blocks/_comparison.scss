@@ -27,14 +27,12 @@
   overflow: hidden;
 
   &--after {
-    content: "";
     display: block;
     top: 0;
     right: 0;
   }
 
   &--before {
-    content: "";
     display: block;
     top: 0;
     left: 0;
@@ -43,6 +41,7 @@
 
 .comparison__image {
   display: block;
+  max-width: none;
 
   &--after {
     position: absolute;
@@ -56,6 +55,11 @@
     top: 50%;
     right: 0;
     transform: translate(50%, -50%);
+  }
+
+  @include m.response(medium) {
+    width: 560px;
+    height: auto;
   }
 }
 

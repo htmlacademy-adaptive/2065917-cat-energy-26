@@ -174,14 +174,15 @@
 
   &::after {
     position: absolute;
-    display: block;
-    top: -4px;
-    left: 100%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 0 5px 7px;
-    border-color: transparent transparent transparent c.$txt-title;
+    z-index: 10;
+    top: -5px;
+    right: -6px;
+    display: inline;
+    width: 7px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 6L0.25 11.1962L0.25 0.803848L7 6Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-position: left center;
+    background-repeat: no-repeat;
     content: "";
   }
 }
