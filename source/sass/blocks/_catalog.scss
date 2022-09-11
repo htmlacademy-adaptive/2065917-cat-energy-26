@@ -57,6 +57,11 @@
   }
 
   @include m.response(medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 511px;
+
     &::before,
     &::after {
       display: none;
