@@ -18,7 +18,14 @@
   outline: none;
   box-shadow: 0 0 0 1px c.$border-lite;
   transition: box-shadow 0.1s ease-out;
+  -webkit-appearance: none; /*stylelint-disable property-no-vendor-prefix*/
   appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   &:not(:placeholder-shown) {
     box-shadow: 0 0 0 1px c.$misc-error,
