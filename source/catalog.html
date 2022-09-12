@@ -15,10 +15,14 @@
       <div class="header__wrapper page-wrapper">
         <div class="header__container">
           <a class="header__link" href="./index.html">
-            <img class="header__image" src="./img/cat-energy-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+            <picture>
+              <source media="(min-width: 1240px)" srcset="./img/icons/logo_large.svg">
+              <source media="(min-width: 700px)" srcset="./img/icons/logo_medium.svg">
+              <img class="header__image" src="./img/icons/logo_small.svg" width="34" height="38" alt="Логотип Cat Energy.">
+            </picture>
           </a>
           <a class="header__link" href="./index.html">
-            <img class="header__lettering" src="./img/header-lettering.svg" width="101" height="18" alt="Cat Energy.">
+            <img class="header__lettering" src="./img/icons/header_lettering.svg" width="101" height="18" alt="Cat Energy.">
           </a>
           <button class="header__button menu-button" type="button">
             <span class="visually-hidden">Меню.</span>
