@@ -18,6 +18,10 @@
       position: static;
     }
   }
+
+  &--nojs .header__button {
+    visibility: hidden;
+  }
 }
 
 .header__wrapper {

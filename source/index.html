@@ -26,8 +26,8 @@
           </a>
           <button class="header__button menu-button" type="button">
             <span class="visually-hidden">Меню.</span>
-            <div class="menu-button__E"></div>
-            <div class="menu-button__X"></div>
+            <span class="menu-button__E"></span>
+            <span class="menu-button__X"></span>
           </button>
         </div>
         <nav class="header__menu site-navigation site-navigation--accent site-navigation--nojs">
@@ -73,7 +73,7 @@
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
               <div class="preview-card__line"></div>
-              <a class="preview-card__link" href="#">
+              <a class="preview-card__link" href="./catalog.html#slim">
                 Каталог SLIM
                 <span class="preview-card__link-arrow"></span>
               </a>
@@ -86,7 +86,7 @@
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
               <div class="preview-card__line"></div>
-              <a class="preview-card__link" href="#">
+              <a class="preview-card__link" href="./catalog.html#pro">
                 Каталог PRO
                 <span class="preview-card__link-arrow"></span>
               </a>
@@ -128,17 +128,19 @@
             <p class="example__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
             </p>
-            <dl class="example__data">
-              <div class="example__data-container">
-                <dt class="example__parameter">Снижение веса</dt>
-                <dd class="example__value">5 кг</dd>
-              </div>
-              <div class="example__data-container">
-                <dt class="example__parameter">Затрачено времени</dt>
-                <dd class="example__value">60 дней</dd>
-              </div>
+            <div class="example__data-wrapper">
+              <dl class="example__data">
+                <div class="example__data-container">
+                  <dt class="example__parameter">Снижение веса</dt>
+                  <dd class="example__value">5 кг</dd>
+                </div>
+                <div class="example__data-container">
+                  <dt class="example__parameter">Затрачено времени</dt>
+                  <dd class="example__value">60 дней</dd>
+                </div>
+              </dl>
               <p class="example__total">Затраты на питание: <br><span class="example__price">15 000 РУБ.</span></p>
-            </dl>
+            </div>
           </div>
           <div class="example__comparison comparison" aria-hidden="true">
             <div class="comparison-wrapper">
@@ -159,7 +161,9 @@
                 </picture>
               </div>
               <div class="comparison__control split">
-                <button class="comparison__thumb" type="button"></button>
+                <button class="comparison__thumb" type="button">
+                  <span class="visually-hidden">Ручка слайдера.</span>
+                </button>
                 <div class="comparison__divider"></div>
               </div>
             </div>
@@ -173,15 +177,29 @@
       <section class="contacts contacts--accent">
         <div class="contacts-wrapper page-wrapper">
           <div class="contacts__address-wrapper">
-            <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+            <h2 class="contacts__title">Приглашаем <br>к сотрудничеству <br>дилеров!</h2>
             <address class="contacts__address">
-              <p class="contacts__street">ул. Большая<br>Конюшенная, д. 19/8</p>
+              <p class="contacts__street">ул. Большая <br>Конюшенная, д. 19/8</p>
               <p class="contacts__city">Санкт-Петербург</p>
             </address>
           </div>
         </div>
         <div class="contacts__map-wrapper">
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716161165!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661035919798!5m2!1sru!2sru" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="contacts__map-fallback contacts__map-fallback--nojs">
+            <picture>
+              <source type="image/webp" media="(min-width: 1240px)" srcset="./img/map_large.webp">
+              <source media="(min-width: 1240px)" srcset="./img/map_large.jpg">
+              <source type="image/webp" media="(min-width: 700px)" srcset="./img/map_medium.webp">
+              <source media="(min-width: 700px)" srcset="./img/map_medium.jpg">
+              <source type="image/webp" srcset="./img/map_small.webp">
+              <img class="contacts__map-image" src="./img/map_small.jpg" width="320" height="362" alt="Карта расположения магазина Cat Energy.">
+            </picture>
+            <picture>
+              <source media="(min-width: 700px)" srcset="./img/map_pin_medium.png">
+              <img class="contacts__map-pin" src="./img/map_pin_small.png" width="57" height="53" alt="Мы находимся здесь!">
+            </picture>
+          </div>
+          <iframe class="contacts__map contacts__map--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716161165!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661035919798!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 
@@ -189,7 +207,7 @@
         <ul class="footer-primary__list page-wrapper">
           <li class="footer-primary__item">
             <a class="footer-primary__link" href="./index.html">
-              <svg class="footer-primary__lettering" width="128" height="24" role="logo" aria-label="Cat Energy.">
+              <svg class="footer-primary__lettering" width="128" height="24" role="img" aria-label="Главная страница сайта Cat Energy.">
                 <use href="./img/icons/sprite_footer.svg#footer_logo"></use>
               </svg>
             </a>
@@ -226,7 +244,7 @@
             <div class="footer-primary__copyright copyright">
               <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg class="copyright__image" fill="currentColor" width="27" height="34" role="img" aria-label="Логотип HTML Academy." >
+                <svg class="copyright__image" fill="currentColor" width="27" height="34" role="img" aria-label="Сайт HTML Academy." >
                   <use href="./img/icons/sprite_footer.svg#academy"></use>
                 </svg>
               </a>
