@@ -14,6 +14,7 @@
 
 .menu-button__E {
   position: relative;
+  display: block;
   width: 24px;
   height: 1.5px;
   background-color: c.$txt-title;
@@ -42,6 +43,7 @@
 
 .menu-button__X {
   position: relative;
+  display: block;
   transform: scaleY(0);
   transition: transform 0.1s ease-out;
 

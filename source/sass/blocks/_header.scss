@@ -18,6 +18,10 @@
       position: static;
     }
   }
+
+  &--nojs .header__button {
+    visibility: hidden;
+  }
 }
 
 .header__wrapper {
@@ -94,20 +98,22 @@
   display: block;
 
   @include m.response(medium) {
-    width: auto;
+    width: 174px;
     height: 52px;
-    margin-right: 26px;
   }
 
   @include m.response(large) {
-    width: auto;
+    width: 202px;
     height: 59px;
-    margin-right: 48px;
   }
 }
 
 .header__lettering {
   display: block;
+
+  @include m.response(medium) {
+    display: none;
+  }
 }
 
 .header__menu {
