@@ -403,14 +403,19 @@
   padding-right: 22px;
   background-color: c.$bg-base;
 
+  & .break::after {
+    content: "\A";
+    white-space: pre;
+  }
+
   @include m.response(medium) {
     max-width: 600px;
     margin-left: -40px;
     padding-left: 41px;
     padding-right: 41px;
 
-    & br {
-      display: none;
+    & .break::after {
+      white-space: nowrap;
     }
   }
 

@@ -8,7 +8,7 @@
   <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touche-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>CAT ENERGY: Подбор программы</title>
 </head>
 
@@ -100,14 +100,14 @@
       <!-- данные владельца -->
       <fieldset class="form__fieldset form__fieldset--personal">
         <div class="form__legend-container">
-          <h2 class="form__legend subtitle">Контактные данные<br>(владельца кота)</h2>
+          <h2 class="form__legend subtitle">Контактные данные<span class="break"></span> (владельца кота)</h2>
         </div>
         <div class="form__owner-info-wrapper">
           <div class="form__label-container">
             <input class="form__input form__input--email input-text input-text--accent" type="email" name="client_email" id="client_email" value="kuklachev@gmail.com" placeholder=" "  required>
             <label class="form__label form__label--email label" for="client_email">E-mail:*</label>
             <div class="form__input-icon form__input-icon--email">
-              <svg class="form__input-img" width="19" height="14" aria-hidden="true" focusable="false">
+              <svg class="form__input-img" width="19" height="14" stroke="currentColor" aria-hidden="true" focusable="false">
                 <use href="./img/icons/sprite_form.svg#form_email"></use>
               </svg>
             </div>
@@ -116,7 +116,7 @@
             <input class="form__input form__input--phone input-text input-text--accent" type="tel" name="client_phone" id="client_phone" value="8 (960) 900-60-90" placeholder=" " pattern="^[\d\(\)\s\-]+$" required>
             <label class="form__label form__label--phone label" for="client_phone">Телефон:*</label>
             <div class="form__input-icon form__input-icon--phone">
-              <svg class="form__input-img" width="20" height="20" aria-hidden="true" focusable="false">
+              <svg class="form__input-img" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                 <use href="./img/icons/sprite_form.svg#form_phone"></use>
                 </svg>
             </div>
