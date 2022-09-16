@@ -10,13 +10,13 @@
   width: 100%;
   min-height: 290px;
   padding: 59px 59px 43px;
-  background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_small.jpg") no-repeat;
+  background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_small.jpg") no-repeat;
   background-position: 50%;
   background-size: cover;
   background-color: c.$bg-accent;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_small@2x.jpg") no-repeat;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_small@2x.jpg") no-repeat;
     background-position: 50%;
     background-size: cover;
   }
@@ -25,12 +25,12 @@
     flex-direction: row;
     padding: 57px 77px 60px;
     min-height: 200px;
-    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_medium.jpg") no-repeat;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_medium.jpg") no-repeat;
     background-position: 50%;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_medium@2x.jpg") no-repeat;
+      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_medium@2x.jpg") no-repeat;
       background-position: 50%;
       background-size: cover;
     }
@@ -41,12 +41,12 @@
     width: 245px;
     min-height: 289px;
     padding: 56px 42px 42px;
-    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_large.jpg") no-repeat;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_large.jpg") no-repeat;
     background-position: 50%;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/gift_large@2x.jpg") no-repeat;
+      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_large@2x.jpg") no-repeat;
       background-position: 50%;
       background-size: cover;
     }

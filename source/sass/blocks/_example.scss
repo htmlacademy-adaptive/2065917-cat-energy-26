@@ -192,8 +192,9 @@
   text-align: center;
   text-transform: uppercase;
 
-  & br {
-    display: none;
+  & .break::after {
+    content: "\A";
+    white-space: nowrap;
   }
 
   @include m.response(medium) {
@@ -204,8 +205,8 @@
     line-height: 130%;
     text-align: right;
 
-    & br {
-      display: block;
+    & .break::after {
+      white-space: pre;
     }
   }
 
@@ -213,8 +214,8 @@
     margin-top: 60px;
     text-align: left;
 
-    & br {
-      display: none;
+    & .break::after {
+      white-space: nowrap;
     }
   }
 }

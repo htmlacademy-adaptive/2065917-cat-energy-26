@@ -8,7 +8,7 @@
   <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touche-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>CAT ENERGY: Подбор программы</title>
 </head>
 
@@ -100,15 +100,15 @@
       <!-- данные владельца -->
       <fieldset class="form__fieldset form__fieldset--personal">
         <div class="form__legend-container">
-          <h2 class="form__legend subtitle">Контактные данные<br>(владельца кота)</h2>
+          <h2 class="form__legend subtitle">Контактные данные<span class="break"></span> (владельца кота)</h2>
         </div>
         <div class="form__owner-info-wrapper">
           <div class="form__label-container">
             <input class="form__input form__input--email input-text input-text--accent" type="email" name="client_email" id="client_email" value="kuklachev@gmail.com" placeholder=" "  required>
             <label class="form__label form__label--email label" for="client_email">E-mail:*</label>
             <div class="form__input-icon form__input-icon--email">
-              <svg class="form__input-img" width="19" height="14" aria-hidden="true" focusable="false">
-                <use href="./img/icons/sprite_form.svg#email"></use>
+              <svg class="form__input-img" width="19" height="14" stroke="currentColor" aria-hidden="true" focusable="false">
+                <use href="./img/icons/sprite_form.svg#form_email"></use>
               </svg>
             </div>
           </div>
@@ -116,8 +116,8 @@
             <input class="form__input form__input--phone input-text input-text--accent" type="tel" name="client_phone" id="client_phone" value="8 (960) 900-60-90" placeholder=" " pattern="^[\d\(\)\s\-]+$" required>
             <label class="form__label form__label--phone label" for="client_phone">Телефон:*</label>
             <div class="form__input-icon form__input-icon--phone">
-              <svg class="form__input-img" width="20" height="20" aria-hidden="true" focusable="false">
-                <use href="./img/icons/sprite_form.svg#phone"></use>
+              <svg class="form__input-img" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                <use href="./img/icons/sprite_form.svg#form_phone"></use>
                 </svg>
             </div>
           </div>
@@ -208,7 +208,7 @@
         <li class="footer-primary__item">
           <a class="footer-primary__link" href="./index.html">
             <svg class="footer-primary__lettering" width="128" height="24" role="img" aria-label="Главная страница сайта Cat Energy.">
-              <use href="./img/icons/sprite_footer.svg#footer_logo"></use>
+              <use href="./img/icons/sprite_footer.svg#footer_lettering"></use>
             </svg>
           </a>
         </li>
@@ -217,7 +217,7 @@
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                 <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" role="img">
-                  <use href="./img/icons/sprite_footer.svg#vk"></use>
+                  <use href="./img/icons/sprite_footer.svg#footer_vk"></use>
                 </svg>
                   <span class="visually-hidden">В Контакте.</span>
                 </a>
@@ -225,7 +225,7 @@
             <li class="social__item">
               <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
                 <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" role="img">
-                  <use href="./img/icons/sprite_footer.svg#yt"></use>
+                  <use href="./img/icons/sprite_footer.svg#footer_yt"></use>
                 </svg>
                 <span class="visually-hidden">YouTube.</span>
               </a>
@@ -233,7 +233,7 @@
             <li class="social__item">
               <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
                 <svg class="social__icon" aria-hidden="true" focusable="false" fill="currentColor" width="28" height="22" role="img">
-                  <use href="./img/icons/sprite_footer.svg#tg"></use>
+                  <use href="./img/icons/sprite_footer.svg#footer_tg"></use>
                 </svg>
                   <span class="visually-hidden">Telegram.</span>
                 </a>
@@ -245,7 +245,7 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__image" fill="currentColor" width="27" height="34" role="img" aria-label="Сайт HTML Academy." >
-                <use href="./img/icons/sprite_footer.svg#academy"></use>
+                <use href="./img/icons/sprite_footer.svg#footer_htmlacademy"></use>
               </svg>
             </a>
           </div>

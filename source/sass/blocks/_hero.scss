@@ -17,10 +17,10 @@ $hero-ml-l: 80px;
     display: block;
     width: 100%;
     height: 302px;
-    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero_background_small.jpg") top/cover no-repeat;
+    background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_hero_small.jpg") top/cover no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero_background_small@2x.jpg") top/cover no-repeat;
+      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_hero_small@2x.jpg") top/cover no-repeat;
     }
   }
 
@@ -47,10 +47,10 @@ $hero-ml-l: 80px;
       display: block;
       width: 50%;
       height: 694px;
-      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero_background_large.jpg") top/cover no-repeat;
+      background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_hero_large.jpg") top/cover no-repeat;
 
       @media (min-resolution: 2dppx) {
-        background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/hero_background_large@2x.jpg") top/cover no-repeat;
+        background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_hero_large@2x.jpg") top/cover no-repeat;
       }
     }
   }
