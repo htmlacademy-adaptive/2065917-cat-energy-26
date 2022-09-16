@@ -5,7 +5,10 @@
 .site-navigation {
   color: c.$txt-title;
   background-color: c.$bg-base;
-  transition: top 0.3s ease-out;
+  transform-origin: center bottom;
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+
 
   @include m.response(medium) {
     position: static;
@@ -22,7 +25,7 @@
   }
 
   &--opened {
-    top: calc(100% - 1px);
+    transform: translateY(calc(100% - 1px));
   }
 }
 
