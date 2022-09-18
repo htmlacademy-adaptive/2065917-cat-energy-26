@@ -83,7 +83,7 @@
   }
 
   @include m.response(large) {
-    max-width: 800px;
+    max-width: 400px;
   }
 }
 
@@ -91,6 +91,7 @@
   margin-top: 22px;
 
   @include m.response(medium) {
+    max-width: 300px;
     margin: 0;
   }
 }

@@ -22,6 +22,11 @@
   &--nojs {
     position: static;
     z-index: auto;
+
+    @include m.response-reverse(medium) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 
   &--opened {

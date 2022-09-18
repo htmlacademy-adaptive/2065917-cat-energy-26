@@ -128,6 +128,7 @@ $hero-ml-l: 80px;
   }
 
   @include m.response(large) {
+    max-width: 450px;
     margin-left: $hero-ml-l;
     margin-bottom: 52px;
   }
@@ -166,6 +167,7 @@ $hero-ml-l: 80px;
   padding: 11px;
   font-size: v.$font-size-main;
   line-height: 128%;
+  text-align: center;
 
   @include m.response(medium) {
     width: 244px;

@@ -102,6 +102,7 @@
   padding: 10px;
   font-size: v.$font-size-main-big;
   line-height: 125%;
+  text-align: center;
 
   @include m.response(large) {
     grid-column: 4/-1;

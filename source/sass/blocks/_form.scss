@@ -25,6 +25,9 @@
 
 .form__fieldset--cat {
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include m.response(medium) {
     margin-bottom: 72px;
@@ -132,7 +135,7 @@
 
   @include m.response(large) {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 20px 80px;
   }
 }
 
@@ -150,7 +153,7 @@
 
   @include m.response(large) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 20px 80px;
   }
 }
 

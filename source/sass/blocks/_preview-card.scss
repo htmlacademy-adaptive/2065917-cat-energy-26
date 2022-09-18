@@ -111,6 +111,7 @@
 .preview-card__text {
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
 
   @include m.response(medium) {
     padding: 0;

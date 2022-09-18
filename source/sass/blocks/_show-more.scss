@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  min-height: 190px;
+  height: 100%;
   padding-top: 11px;
   padding-bottom: 14px;
   background-color: c.$bg-base;
@@ -93,6 +93,7 @@
 
 .show-more__text {
   margin: 0;
+  margin-bottom: 21px;
   font-size: v.$font-size-micro;
   line-height: 133%;
   color: c.$txt-base;
@@ -112,4 +113,5 @@
   padding: 10px;
   font-size: v.$font-size-main-big;
   line-height: 125%;
+  text-align: center;
 }
