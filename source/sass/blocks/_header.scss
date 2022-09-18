@@ -119,7 +119,7 @@
 .header__menu {
   position: absolute;
   z-index: map-get(v.$layers, menu);
-  top: -440%;
+  bottom: 0;
   left: 0;
   right: 0;
 
