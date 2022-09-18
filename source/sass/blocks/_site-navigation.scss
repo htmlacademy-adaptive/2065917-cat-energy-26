@@ -7,7 +7,7 @@
   background-color: c.$bg-base;
   transform-origin: center bottom;
   will-change: transform;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease-out;
 
 
   @include m.response(medium) {
