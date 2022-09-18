@@ -55,16 +55,18 @@
     </div>
   </header>
 
-  <main class="main page-wrapper">
-    <h1 class="main__title main__title--form">Подбор программы</h1>
-    <p class="main__text">
-      Заполните анкету, и мы подберем программу питания для вашего кота
-    </p>
+  <main class="main">
+    <div class="page-wrapper">
+      <h1 class="main__title main__title--form">Подбор программы</h1>
+      <p class="main__text">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
+    </div>
 
     <form class="main__form form" action="https://echo.htmlacademy.ru/" method="post">
       <h2 class="visually-hidden">Данные кота</h2>
       <!-- данные кота -->
-      <div class="form__wrapper">
+      <div class="form__wrapper page-wrapper page-wrapper page-wrapper--mod">
         <!-- паспортные данные -->
         <fieldset class="form__fieldset form__fieldset--cat">
           <div class="form__cat-wrapper">
@@ -109,7 +111,7 @@
         <div class="form__legend-container">
           <h2 class="form__legend subtitle">Контактные данные<span class="break"></span> (владельца кота)</h2>
         </div>
-        <div class="form__owner-info-wrapper">
+        <div class="form__owner-info-wrapper page-wrapper page-wrapper--mod">
           <div class="form__label-container">
             <input class="form__input form__input--email input-text input-text--accent" type="email" name="client_email" id="client_email" value="kuklachev@gmail.com" placeholder=" "  required>
             <label class="form__label form__label--email label" for="client_email">E-mail:*</label>
@@ -125,7 +127,7 @@
             <div class="form__input-icon form__input-icon--phone">
               <svg class="form__input-img" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                 <use href="./img/icons/sprite_form.svg#form_phone"></use>
-                </svg>
+              </svg>
             </div>
           </div>
         </div>
@@ -136,9 +138,9 @@
         <div class="form__legend-container">
           <h2 class="form__legend subtitle">Комментарий</h2>
         </div>
-        <textarea class="form__input form__input--comment" name="about_cat" wrap="soft"
-          placeholder="Расскажите обо всех повадках кота"
-          aria-label="Дополнительная информация о Вашем коте."></textarea>
+        <div class="page-wrapper page-wrapper--mod">
+          <textarea class="form__input form__input--comment" name="about_cat" wrap="soft" placeholder="Расскажите обо всех повадках кота" aria-label="Дополнительная информация о Вашем коте."></textarea>
+        </div>
       </fieldset>
 
       <!-- дополнительные товары -->
@@ -146,7 +148,7 @@
         <div class="form__legend-container">
           <h2 class="form__legend subtitle">Дополнительно</h2>
         </div>
-        <div class="form__adds-info-wrapper">
+        <div class="form__adds-info-wrapper page-wrapper page-wrapper--mod">
           <label class="form__label form__label--adds custom-checkbox">
             <input class="custom-checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
             <span class="custom-checkbox__button"></span>
@@ -170,7 +172,7 @@
         </div>
       </fieldset>
       <!-- кнопка -->
-      <div class="form__button-wrapper">
+      <div class="form__button-wrapper page-wrapper page-wrapper--mod">
         <button class="form__button button" type="submit">Отправить заявку</button>
         <p class="form__footnote">
           * — Обязательные поля

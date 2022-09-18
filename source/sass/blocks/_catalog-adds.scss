@@ -17,46 +17,35 @@
 
 .catalog-adds__title-container {
   position: relative;
-  margin-bottom: 36px;
 
   &::before {
-    display: block;
     position: absolute;
-    top: 15px;
-    width: 100vw;
+    top: 55%;
+    display: block;
+    width: 100%;
     height: 2px;
     background-color: c.$bg-accent;
     content: "";
   }
-
-  @include m.response (medium) {
-    margin-bottom: 80px;
-
-    &::before {
-      top: 20px;
-    }
-  }
 }
 
 .catalog-adds__title {
-  max-width: 300px;
+  display: block;
   margin: 0;
-  padding-left: 20px;
-  padding-right: 22px;
   background-color: c.$bg-base;
+  margin-left: calc(20px - 22px);
+  margin-bottom: 36px;
+  padding: 0 20px;
 
   @include m.response(medium) {
-    max-width: 450px;
     margin-left: 30px;
-    padding-left: 37px;
-    padding-right: 36px;
+    margin-bottom: 80px;
+    padding: 0 36px;
   }
 
   @include m.response(large) {
-    max-width: 650px;
-    margin-left: max(70px, calc(70px + (100vw - 1440px) / 2));
-    padding-left: 40px;
-    padding-right: 35px;
+    margin-left: max(calc(110px - 40px), calc((100vw - 1220px) / 2 - 40px));
+    padding: 0 40px;
   }
 }
 

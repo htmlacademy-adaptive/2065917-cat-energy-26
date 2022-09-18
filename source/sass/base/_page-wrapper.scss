@@ -19,4 +19,16 @@
     padding-left: map-get(v.$indents, large);
     padding-right: map-get(v.$indents, large);
   }
+
+  &--mod {
+    @include m.response(medium) {
+      padding-left: calc(map-get(v.$indents, medium) + 40px); /* stylelint-disable-line function-calc-no-unspaced-operator*/
+      padding-right: calc(map-get(v.$indents, medium) + 40px); /* stylelint-disable-line function-calc-no-unspaced-operator*/
+    }
+
+    @include m.response(large) {
+      padding-left: map-get(v.$indents, large);
+      padding-right: map-get(v.$indents, large);
+    }
+  }
 }
