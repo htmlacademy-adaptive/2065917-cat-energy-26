@@ -192,11 +192,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  & .break::after {
-    content: "\A";
-    white-space: nowrap;
-  }
-
   @include m.response(medium) {
     flex-shrink: 0;
     margin: 0;
@@ -204,17 +199,24 @@
     font-size: v.$font-size-menu-big;
     line-height: 130%;
     text-align: right;
-
-    & .break::after {
-      white-space: pre;
-    }
   }
 
   @include m.response(large) {
     margin-top: 60px;
     text-align: left;
+  }
+}
 
-    & .break::after {
+.example__break {
+  &::after {
+    content: "\A";
+    white-space: nowrap;
+
+    @include m.response(medium) {
+      white-space: pre;
+    }
+
+    @include m.response(large) {
       white-space: nowrap;
     }
   }

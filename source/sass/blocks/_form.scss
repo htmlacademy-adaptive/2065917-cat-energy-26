@@ -296,6 +296,7 @@
 
 .form__input-icon {
   position: absolute;
+  background-color: c.$bg-base;
 
   .form__input:not(:placeholder-shown) ~ & {
     color: c.$misc-error;
@@ -361,26 +362,28 @@
   margin-bottom: 36px;
   padding: 0 20px;
 
-  & .break::after {
-    content: "\A";
-    white-space: pre;
-  }
-
   @include m.response(medium) {
     max-width: 600px;
     margin-left: 30px;
     margin-bottom: 80px;
     padding: 0 36px;
-
-    & .break::after {
-      white-space: nowrap;
-    }
   }
 
   @include m.response(large) {
     max-width: 650px;
     margin-left: max(calc(110px - 40px), calc((100vw - 1220px) / 2 - 40px));
     padding: 0 40px;
+  }
+}
+
+.form__break {
+  &::after {
+    content: "\A";
+    white-space: pre;
+
+    @include m.response(medium) {
+      white-space: nowrap;
+    }
   }
 }
 

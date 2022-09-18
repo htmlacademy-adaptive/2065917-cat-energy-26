@@ -63,8 +63,9 @@
     transition-delay: 0.1s;
   }
 
-  .custom-checkbox__input:focus + & {
-    border-color: c.$border-accent;
+  .custom-checkbox__input:focus-visible + & {
+    border-color: c.$txt-base;
+    outline: 1px solid c.$txt-base;
   }
 
   .custom-checkbox--disabled & {
