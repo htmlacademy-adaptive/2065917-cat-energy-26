@@ -79,7 +79,7 @@
     line-height: 133%;
     transition: opacity 0.1s ease-out;
 
-    &--current::after {
+    &[aria-current="page"]::after {
       display: block;
       position: absolute;
       bottom: 0;
@@ -110,7 +110,7 @@
   @include m.response(large) {
     color: c.$txt-accent;
 
-    .site-navigation__link--current::after {
+    .site-navigation__link[aria-current="page"]::after {
       background-color: c.$bg-base;
     }
   }
