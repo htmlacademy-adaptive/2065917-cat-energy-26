@@ -28,14 +28,15 @@
   padding-bottom: 26px;
 
   @include m.response(medium) {
-    padding: 56px 40px;
+    padding: 59px 40px;
   }
 
   @include m.response(large) {
     position: relative;
     z-index: map-get(v.$layers, address);
     width: 565px;
-    padding: 56px 80px;
+    padding: 60px 80px;
+    padding-bottom: 56px;
     background-color: c.$bg-base;
   }
 }
@@ -56,6 +57,7 @@
 }
 
 .contacts__address {
+  margin-right: 4px;
   font: inherit;
   font-size: v.$font-size-main-big;
   line-height: 125%;
@@ -67,6 +69,8 @@
   }
 
   @include m.response(medium) {
+    margin-top: -3px;
+    margin-right: 2px;
     text-align: right;
   }
 
@@ -77,7 +81,7 @@
 
 .contacts__street {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   @include m.response-reverse(medium) {
     margin-bottom: 0;

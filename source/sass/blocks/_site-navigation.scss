@@ -62,7 +62,7 @@
   }
 
   @include m.response(large) {
-    margin-left: 34px;
+    margin-left: 36px;
   }
 }
 
@@ -107,7 +107,7 @@
     padding: 10px 0 10px;
     font-weight: 400;
     font-size: v.$font-size-menu-big;
-    line-height: 150%;
+    line-height: 120%;
   }
 }
 

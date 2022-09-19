@@ -8,11 +8,12 @@
 
   @include m.response(medium) {
     padding-top: 0;
+    padding-bottom: 40px;
   }
 
   @include m.response(large) {
     padding-top: 82px;
-    padding-bottom: 36px;
+    padding-bottom: 68px;
   }
 }
 

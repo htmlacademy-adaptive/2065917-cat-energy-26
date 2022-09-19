@@ -14,10 +14,10 @@
 
   @include m.response(medium) {
     min-height: 372px;
-    padding-top: 77px;
+    padding-top: 75px;
     padding-left: 52px;
     padding-right: 315px;
-    padding-bottom: 57px;
+    padding-bottom: 59px;
   }
 
   @include m.response(large) {
@@ -41,7 +41,7 @@
     background: transparent url("./../img/icons/icon_slim.svg") center/cover no-repeat;
 
     @include m.response(medium) {
-      top: 81px;
+      top: 79px;
       right: 62px;
       left: auto;
       width: 200px;
@@ -67,7 +67,7 @@
     background: transparent url("./../img/icons/icon_pro.svg") center/cover no-repeat;
 
     @include m.response(medium) {
-      top: 91px;
+      top: 89px;
       right: 28px;
       left: auto;
       width: 268px;
@@ -76,7 +76,7 @@
 
     @include m.response(large) {
       top: 47px;
-      left: 33px;
+      left: 34px;
       right: auto;
       width: 134px;
       height: 100px;
@@ -99,7 +99,7 @@
     font-size: v.$font-size-title;
     line-height: 100%;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   @include m.response(large) {
@@ -124,7 +124,7 @@
   width: 100%;
   height: 1px;
   margin-top: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   background-color: c.$misc-line;
 
   @include m.response(medium) {
@@ -161,12 +161,14 @@
   position: relative;
   width: 18px;
   height: 2px;
-  margin-left: 15px;
+  margin-left: 16px;
+  margin-bottom: 4px;
   background-color: c.$txt-title;
   transition: width 0.1s ease-out;
 
   @include m.response(medium) {
     margin-left: 25px;
+    margin-bottom: 2px;
 
     .preview-card__link:hover & {
       width: 26px;
@@ -184,5 +186,9 @@
     background-position: left center;
     background-repeat: no-repeat;
     content: "";
+  }
+
+  @include m.response(large) {
+    margin-left: 28px;
   }
 }

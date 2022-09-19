@@ -35,8 +35,8 @@ $hero-ml-l: 80px;
 
   @include m.response(large) {
     position: static;
-    min-height: 582px;
-    padding-top: 111px;
+    min-height: 574px;
+    padding-top: 103px;
 
     &::before {
       position: absolute;
@@ -93,7 +93,7 @@ $hero-ml-l: 80px;
 
   @include m.response(medium) {
     width: 450px;
-    margin-left: $hero-ml-m;
+    margin-left: 87px;
     margin-bottom: 41px;
     font-size: v.$font-size-title-big;
     text-align: left;
@@ -120,7 +120,7 @@ $hero-ml-l: 80px;
   color: c.$txt-accent;
 
   @include m.response(medium) {
-    margin-left: $hero-ml-m;
+    margin-left: 89px;
     margin-bottom: 49px;
     font-size: v.$font-size-menu-big;
     text-align: left;

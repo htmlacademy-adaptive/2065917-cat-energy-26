@@ -74,16 +74,18 @@
 
 .footer-primary__social-list {
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 21px;
+  margin-top: 16px;
+  margin-bottom: 13px;
 
   @include m.response(medium) {
     max-width: 300px;
     margin: 0;
+    margin-left: 12px;
   }
 
   @include m.response(large) {
     max-width: 400px;
+    margin-left: 14px;
   }
 }
 
