@@ -30,12 +30,12 @@
     margin-bottom: 37px;
 
     @include m.response(medium) {
-      margin-left: 40px;
+      margin-left: 38px;
       margin-bottom: 54px;
     }
 
     @include m.response(large) {
-      margin-top: 74px;
+      margin-top: 67px;
       margin-left: 0;
       margin-bottom: 56px;
     }
