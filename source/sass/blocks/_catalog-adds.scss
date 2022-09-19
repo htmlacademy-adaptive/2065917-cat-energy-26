@@ -11,7 +11,7 @@
   }
 
   @include m.response(large) {
-    margin-bottom: 86px;
+    margin-bottom: 85px;
   }
 }
 
@@ -20,7 +20,7 @@
 
   &::before {
     position: absolute;
-    top: 55%;
+    top: 61%;
     display: block;
     width: 100%;
     height: 2px;
@@ -35,7 +35,7 @@
   margin: 0;
   background-color: c.$bg-base;
   margin-left: calc(20px - 22px);
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   padding: 0 20px;
 
   @include m.response(medium) {
@@ -67,10 +67,10 @@
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   @include m.response(medium) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
   }
 
   @include m.response(large) {

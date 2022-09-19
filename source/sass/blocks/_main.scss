@@ -7,8 +7,8 @@
 }
 
 .main__title {
-  margin-top: 27px;
-  margin-bottom: 41px;
+  margin-top: 28px;
+  margin-bottom: 48px;
   font-family: v.$font-main;
   font-size: v.$font-size-title;
   font-weight: 400;
@@ -22,7 +22,7 @@
   }
 
   @include m.response(large) {
-    margin-top: 76px;
+    margin-top: 69px;
     margin-bottom: 84px;
   }
 
