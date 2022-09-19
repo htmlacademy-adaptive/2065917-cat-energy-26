@@ -143,15 +143,15 @@
   transform: translateX(-50%);
   content: "";
   transition: background-color 0.1s ease-out;
+}
 
-  @include m.response(medium) {
-    .comparison__thumb:hover + & {
-      background-color: c.$bg-accent;
-    }
+@include m.response(medium) {
+  .comparison__thumb:hover + .comparison__divider {
+    background-color: c.$bg-accent;
+  }
 
-    .comparison__thumb:active + & {
-      background-color: c.$bg-accent-dark;
-      opacity: 0.6;
-    }
+  .comparison__thumb:active + .comparison__divider {
+    background-color: c.$bg-accent-dark;
+    opacity: 0.6;
   }
 }

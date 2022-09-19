@@ -61,8 +61,10 @@
     transition-delay: 0.1s;
   }
 
-  .custom-radio__input:focus + & {
-    border-color: c.$border-accent;
+  .custom-radio__input:focus-visible + & {
+    // border-color: c.$border-accent;
+    border-color: c.$txt-base;
+    outline: 1px solid c.$txt-base;
   }
 
   .custom-radio--disabled & {

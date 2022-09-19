@@ -38,3 +38,9 @@ img {
   line-height: 129%;
   color: c.$txt-base;
 }
+
+a {
+  &:focus-visible {
+    outline: 2px solid c.$txt-base;
+  }
+}

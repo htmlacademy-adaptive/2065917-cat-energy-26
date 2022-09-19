@@ -3,7 +3,7 @@
 @use "../base/mixins" as m;
 
 .catalog {
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 
   @include m.response(medium) {
     margin-bottom: 68px;
@@ -18,7 +18,7 @@
   @include m.reset-list;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 19px;
+  gap: 18px;
 
   @include m.response(medium) {
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: flex-end;
     min-height: 511px;
+    padding-top: 80px;
 
     &::before,
     &::after {

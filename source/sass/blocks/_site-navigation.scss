@@ -7,7 +7,7 @@
   background-color: c.$bg-base;
   transform-origin: center bottom;
   will-change: transform;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease-out;
 
 
   @include m.response(medium) {
@@ -22,6 +22,11 @@
   &--nojs {
     position: static;
     z-index: auto;
+
+    @include m.response-reverse(medium) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 
   &--opened {
@@ -57,7 +62,7 @@
   }
 
   @include m.response(large) {
-    margin-left: 34px;
+    margin-left: 36px;
   }
 }
 
@@ -79,7 +84,7 @@
     line-height: 133%;
     transition: opacity 0.1s ease-out;
 
-    &--current::after {
+    &[aria-current="page"]::after {
       display: block;
       position: absolute;
       bottom: 0;
@@ -102,7 +107,7 @@
     padding: 10px 0 10px;
     font-weight: 400;
     font-size: v.$font-size-menu-big;
-    line-height: 150%;
+    line-height: 120%;
   }
 }
 
@@ -110,7 +115,7 @@
   @include m.response(large) {
     color: c.$txt-accent;
 
-    .site-navigation__link--current::after {
+    .site-navigation__link[aria-current="page"]::after {
       background-color: c.$bg-base;
     }
   }

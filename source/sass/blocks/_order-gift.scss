@@ -24,6 +24,7 @@
   @include m.response(medium) {
     flex-direction: row;
     padding: 57px 77px 60px;
+    padding-right: 110px;
     min-height: 200px;
     background: linear-gradient(rgba(c.$bg-accent, 0.85), rgba(c.$bg-accent, 0.85)), url("../img/bg_gift_medium.jpg") no-repeat;
     background-position: 50%;
@@ -80,6 +81,7 @@
 
   @include m.response(medium) {
     width: 175px;
+    padding-top: 10px;
     text-align: left;
   }
 

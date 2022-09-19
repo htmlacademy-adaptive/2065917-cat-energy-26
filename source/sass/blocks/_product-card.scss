@@ -9,8 +9,8 @@
   grid-template-areas: "image title"
     "image data"
     "button button";
-  min-height: 190px;
-  padding-top: 11px;
+  height: 100%;
+  padding-top: 14px;
   padding-bottom: 14px;
   background-color: c.$bg-base;
 
@@ -22,8 +22,12 @@
       "data"
       "button";
     min-height: 430px;
-    padding: 39px 36px;
+    padding: 39px 37px;
     background-color: c.$bg-block;
+  }
+
+  @include m.response(large) {
+    padding-left: 39px;
   }
 }
 
@@ -72,18 +76,22 @@
   &--small {
     width: 68px;
     height: auto;
+    margin-bottom: 3px;
 
     @include m.response(medium) {
       width: 163px;
+      margin: 0;
     }
   }
 
   &--big {
     width: 84px;
     height: auto;
+    margin-bottom: 4px;
 
     @include m.response(medium) {
       width: 168px;
+      margin: 0;
     }
 
     @include m.response(large) {
@@ -96,7 +104,7 @@
 .product-card__title {
   width: 95px;
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 14px;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
@@ -107,7 +115,7 @@
 
   @include m.response(medium) {
     width: 150px;
-    margin-bottom: 21px;
+    margin-bottom: 15px;
     font-size: v.$font-size-menu-big;
     line-height: 120%;
     text-align: center;
@@ -122,12 +130,16 @@
   }
 
   @include m.response(large) {
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 17px;
     line-height: 105%;
   }
 }
 
 .product-card__data {
-  margin-bottom: 15px;
+  margin: 0;
+  margin-bottom: 21px;
   font-size: v.$font-size-micro;
   line-height: 133%;
 
@@ -142,15 +154,22 @@
   justify-content: space-between;
 
   @include m.response(medium) {
-    padding-top: 5px;
+    padding-top: 7px;
     padding-bottom: 8px;
     border-bottom: 1px solid c.$border-base;
   }
 }
 
 .product-card__value {
+  flex-shrink: 0;
+  width: 55px;
   margin: 0;
   padding: 0;
+  text-align: right;
+
+  @include m.response(medium) {
+    margin-right: 3px;
+  }
 }
 
 .product-card__button {
@@ -159,4 +178,5 @@
   padding: 10px;
   font-size: v.$font-size-main-big;
   line-height: 125%;
+  text-align: center;
 }

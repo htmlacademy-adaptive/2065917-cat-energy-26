@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preload" href="./css/style.min.css" as="style">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./js/script.js" as="script">
+    <link rel="preload" href="./js/script.min.js" as="script">
     <link rel="preload" media="(min-width: 1240px) and (min-resolution: 2dppx)" href="./img/bg_gift_large@2x.jpg" as="image">
     <link rel="preload" media="(min-width: 1240px)" href="./img/bg_gift_large.jpg" as="image">
     <link rel="preload" href="./img/bg_gift_small@2x.jpg" as="image">
@@ -21,6 +21,7 @@
     <title>CAT ENERGY: Каталог</title>
   </head>
   <body class="page__body">
+    <!-- .header--nojs возвращает в поток хэдер и скрывает бурег-кнопку -->
     <header class="header header--nojs">
       <div class="header__wrapper page-wrapper">
         <div class="header__container">
@@ -34,19 +35,22 @@
           <a class="header__link" href="./index.html">
             <img class="header__lettering" src="./img/icons/header_lettering.svg" width="101" height="18" alt="Cat Energy.">
           </a>
+          <!-- .menu-button--opened переключает вид бургенр кнопки при открытии меню -->
           <button class="header__button menu-button" type="button">
             <span class="visually-hidden">Меню.</span>
             <span class="menu-button__E"></span>
             <span class="menu-button__X"></span>
           </button>
         </div>
+        <!-- .site-navigation--nojs возвращает в поток меню -->
+        <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
         <nav class="header__menu site-navigation site-navigation--nojs">
           <ul class="site-navigation__list" role="menubar">
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="./index.html">Главная</a>
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link site-navigation__link--current" href="./catalog.html">Каталог продукции</a>
+              <a class="site-navigation__link" href="./catalog.html" aria-current="page">Каталог продукции</a>
             </li>
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="./form.html">Подбор программы</a>
@@ -104,7 +108,7 @@
                   <source type="image/webP" media="(min-width: 700px)" srcset="./img/products/chicken_1000_medium.webp 1x, ./img/products/chicken_1000_medium.webp 2x">
                   <source media="(min-width: 700px)" srcset="./img/products/chicken_1000_medium.png 1x, ./img/products/chicken_1000_medium.png 2x">
                   <source type="image/webP" srcset="./img/products/chicken_1000_small.webp 1x, ./img/products/chicken_1000_small.webp 2x">
-                  <img class="product-card__image product-card__image--small" src="./img/products/chicken_1000_small.png" srcset="./img/products/chicken_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy PRO со вкусом курицы 1000 г.">
+                  <img class="product-card__image product-card__image--big" src="./img/products/chicken_1000_small.png" srcset="./img/products/chicken_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy PRO со вкусом курицы 1000 г.">
                 </picture>
               </a>
               <a class=" product-card__link product-card__link--title" href="./pro-c-1000.html">
@@ -170,7 +174,7 @@
                   <source type="image/webP" media="(min-width: 700px)" srcset="./img/products/fish_1000_medium.webp 1x, ./img/products/fish_1000_medium.webp 2x">
                   <source media="(min-width: 700px)" srcset="./img/products/fish_1000_medium.png 1x, ./img/products/fish_1000_medium.png 2x">
                   <source type="image/webP" srcset="./img/products/fish_1000_small.webp 1x, ./img/products/fish_1000_small.webp 2x">
-                  <img class="product-card__image product-card__image--small" src="./img/products/fish_1000_small.png" srcset="./img/products/fish_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy PRO со вкусом рыбы 1000 г.">
+                  <img class="product-card__image product-card__image--big" src="./img/products/fish_1000_small.png" srcset="./img/products/fish_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy PRO со вкусом рыбы 1000 г.">
                 </picture>
               </a>
               <a class=" product-card__link product-card__link--title" href="./pro-f-1000.html">
@@ -236,7 +240,7 @@
                   <source type="image/webP" media="(min-width: 700px)" srcset="./img/products/buckwheat_1000_medium.webp 1x, ./img/products/buckwheat_1000_medium.webp 2x">
                   <source media="(min-width: 700px)" srcset="./img/products/buckwheat_1000_medium.png 1x, ./img/products/buckwheat_1000_medium.png 2x">
                   <source type="image/webP" srcset="./img/products/buckwheat_1000_small.webp 1x, ./img/products/buckwheat_1000_small.webp 2x">
-                  <img class="product-card__image product-card__image--small" src="./img/products/buckwheat_1000_small.png" srcset="./img/products/buckwheat_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy SLIM со вкусом гречки 1000 г.">
+                  <img class="product-card__image product-card__image--big" src="./img/products/buckwheat_1000_small.png" srcset="./img/products/buckwheat_1000_small@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Cat Energy SLIM со вкусом гречки 1000 г.">
                 </picture>
               </a>
               <a class=" product-card__link product-card__link--title" href="./slim-b-1000.html">
@@ -385,6 +389,7 @@
           </div>
         </div>
         <div class="contacts__map-wrapper">
+          <!-- .contacts__map-fallback--nojs возвращает в поток фолл-бэк карту -->
           <div class="contacts__map-fallback contacts__map-fallback--nojs">
             <picture>
               <source type="image/webp" media="(min-width: 1240px)" srcset="./img/map_large.webp">
@@ -401,6 +406,7 @@
               <img class="contacts__map-pin" src="./img/map_pin_small.png" loading="lazy" width="57" height="53" alt="Мы находимся здесь!">
             </picture>
           </div>
+          <!-- .contacts__map--nojs скрывает из потока гугл-карту -->
           <iframe class="contacts__map contacts__map--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716161165!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661035919798!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
@@ -456,6 +462,6 @@
       </div>
 
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>

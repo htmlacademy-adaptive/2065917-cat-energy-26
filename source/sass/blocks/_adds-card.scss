@@ -9,10 +9,10 @@
   width: 100%;
   min-height: 130px;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 
   @include m.response(medium) {
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 4fr 9fr 2fr;
     column-gap: 10px;
     align-items: baseline;
     min-height: 139px;
@@ -20,7 +20,7 @@
   }
 
   @include m.response(large) {
-    grid-template-columns: 36.3% 25.1% 6.7% minmax(min-content, 244px);
+    grid-template-columns: 34% 25% 7% minmax(min-content, 244px);
     column-gap: 20px;
     align-items: baseline;
     padding: 15px 0 16px;
@@ -42,7 +42,7 @@
   @include m.response(medium) {
     grid-column: 1/2;
     font-size: v.$font-size-menu-big;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @include m.response(large) {
@@ -102,6 +102,7 @@
   padding: 10px;
   font-size: v.$font-size-main-big;
   line-height: 125%;
+  text-align: center;
 
   @include m.response(large) {
     grid-column: 4/-1;

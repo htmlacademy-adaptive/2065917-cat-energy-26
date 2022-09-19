@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./css/style.min.css" as="style">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./js/script.js" as="script">
+  <link rel="preload" href="./js/script.min.js" as="script">
   <link rel="dns-prefetch" href="https://www.google.com" crossorigin="anonymous">
   <link rel="dns-prefetch" href="https://maps.googleapis.com" crossorigin="anonymous">
   <link rel="prefetch" href="./index.html">
@@ -20,6 +20,7 @@
 </head>
 
 <body class="page__body">
+  <!-- .header--nojs возвращает в поток хэдер и скрывает бурег-кнопку -->
   <header class="header header--nojs">
     <div class="header__wrapper page-wrapper">
       <div class="header__container">
@@ -33,12 +34,15 @@
         <a class="header__link" href="./index.html">
           <img class="header__lettering" src="./img/icons/header_lettering.svg" width="101" height="18" alt="Cat Energy.">
         </a>
+        <!-- .menu-button--opened переключает вид бургенр кнопки при открытии меню -->
         <button class="header__button menu-button" type="button">
           <span class="visually-hidden">Меню.</span>
           <span class="menu-button__E"></span>
           <span class="menu-button__X"></span>
         </button>
       </div>
+      <!-- .site-navigation--nojs возвращает в поток меню -->
+      <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
       <nav class="header__menu site-navigation site-navigation--nojs">
         <ul class="site-navigation__list" role="menubar">
           <li class="site-navigation__item">
@@ -48,23 +52,25 @@
             <a class="site-navigation__link" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link site-navigation__link--current" href="./form.html">Подбор программы</a>
+            <a class="site-navigation__link" href="./form.html" aria-current="page">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="main page-wrapper">
-    <h1 class="main__title main__title--form">Подбор программы</h1>
-    <p class="main__text">
-      Заполните анкету, и мы подберем программу питания для вашего кота
-    </p>
+  <main class="main">
+    <div class="page-wrapper">
+      <h1 class="main__title main__title--form">Подбор программы</h1>
+      <p class="main__text">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
+    </div>
 
     <form class="main__form form" action="https://echo.htmlacademy.ru/" method="post">
       <h2 class="visually-hidden">Данные кота</h2>
       <!-- данные кота -->
-      <div class="form__wrapper">
+      <div class="form__wrapper page-wrapper page-wrapper page-wrapper--mod">
         <!-- паспортные данные -->
         <fieldset class="form__fieldset form__fieldset--cat">
           <div class="form__cat-wrapper">
@@ -107,9 +113,9 @@
       <!-- данные владельца -->
       <fieldset class="form__fieldset form__fieldset--personal">
         <div class="form__legend-container">
-          <h2 class="form__legend subtitle">Контактные данные<span class="break"></span> (владельца кота)</h2>
+          <h2 class="form__legend subtitle">Контактные данные<span class="form__break"></span> (владельца кота)</h2>
         </div>
-        <div class="form__owner-info-wrapper">
+        <div class="form__owner-info-wrapper page-wrapper page-wrapper--mod">
           <div class="form__label-container">
             <input class="form__input form__input--email input-text input-text--accent" type="email" name="client_email" id="client_email" value="kuklachev@gmail.com" placeholder=" "  required>
             <label class="form__label form__label--email label" for="client_email">E-mail:*</label>
@@ -125,7 +131,7 @@
             <div class="form__input-icon form__input-icon--phone">
               <svg class="form__input-img" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                 <use href="./img/icons/sprite_form.svg#form_phone"></use>
-                </svg>
+              </svg>
             </div>
           </div>
         </div>
@@ -136,9 +142,9 @@
         <div class="form__legend-container">
           <h2 class="form__legend subtitle">Комментарий</h2>
         </div>
-        <textarea class="form__input form__input--comment" name="about_cat" wrap="soft"
-          placeholder="Расскажите обо всех повадках кота"
-          aria-label="Дополнительная информация о Вашем коте."></textarea>
+        <div class="page-wrapper page-wrapper--mod">
+          <textarea class="form__input form__input--comment" name="about_cat" wrap="soft" placeholder="Расскажите обо всех повадках кота" aria-label="Дополнительная информация о Вашем коте."></textarea>
+        </div>
       </fieldset>
 
       <!-- дополнительные товары -->
@@ -146,7 +152,7 @@
         <div class="form__legend-container">
           <h2 class="form__legend subtitle">Дополнительно</h2>
         </div>
-        <div class="form__adds-info-wrapper">
+        <div class="form__adds-info-wrapper page-wrapper page-wrapper--mod">
           <label class="form__label form__label--adds custom-checkbox">
             <input class="custom-checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
             <span class="custom-checkbox__button"></span>
@@ -170,7 +176,7 @@
         </div>
       </fieldset>
       <!-- кнопка -->
-      <div class="form__button-wrapper">
+      <div class="form__button-wrapper page-wrapper page-wrapper--mod">
         <button class="form__button button" type="submit">Отправить заявку</button>
         <p class="form__footnote">
           * — Обязательные поля
@@ -192,6 +198,7 @@
         </div>
       </div>
       <div class="contacts__map-wrapper">
+        <!-- .contacts__map-fallback--nojs возвращает в поток фолл-бэк карту -->
         <div class="contacts__map-fallback contacts__map-fallback--nojs">
           <picture>
             <source type="image/webp" media="(min-width: 1240px)" srcset="./img/map_large.webp">
@@ -208,6 +215,7 @@
             <img class="contacts__map-pin" src="./img/map_pin_small.png" loading="lazy" width="57" height="53" alt="Мы находимся здесь!">
           </picture>
         </div>
+        <!-- .contacts__map--nojs скрывает из потока гугл-карту -->
         <iframe class="contacts__map contacts__map--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716161165!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661035919798!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
@@ -263,7 +271,7 @@
     </div>
 
   </footer>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

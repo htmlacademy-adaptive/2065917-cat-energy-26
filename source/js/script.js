@@ -21,7 +21,7 @@ menuButton.addEventListener("click", menuToggle);
 
 // переключатель кнопки меню
 function buttonToggle() {
-  burgerButton.classList.toggle("menu-button--open");
+  burgerButton.classList.toggle("menu-button--opened");
 }
 
 burgerButton.addEventListener("click", buttonToggle);

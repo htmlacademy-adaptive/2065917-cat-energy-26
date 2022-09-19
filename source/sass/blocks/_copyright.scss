@@ -17,11 +17,14 @@
 .copyright__link {
   @include m.reset-link;
   margin-right: auto;
+  margin-left: -1px;
   font-weight: 400;
   font-size: v.$font-size-main-big;
   line-height: 112.5%;
+  text-align: right;
 
   @include m.response(medium) {
+    max-width: 250px;
     margin-right: 22px;
   }
 }

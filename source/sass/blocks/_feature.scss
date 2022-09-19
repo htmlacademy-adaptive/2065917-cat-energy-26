@@ -6,12 +6,12 @@
   padding-bottom: 49px;
 
   @include m.response(medium) {
-    padding-bottom: 47px;
+    padding-bottom: 42px;
     border-bottom: 1px solid c.$border-lite-add;
   }
 
   @include m.response(large) {
-    padding-bottom: calc(49px + 163px);
+    padding-bottom: 201px;
     border-bottom: none;
   }
 }
@@ -35,19 +35,20 @@
   @include m.response(medium) {
     $container-width: 708px;
     grid-template-columns: repeat(2, calc(250px / $container-width * 100%));
-    gap: 37px calc(150px / $container-width * 100%);
+    gap: 37px calc(134px / $container-width * 100%);
   }
 
   @include m.response(large) {
     $container-width: 1220px;
     grid-template-columns: repeat(4, calc(250px / $container-width * 100%));
-    gap: 37px calc(80px / $container-width * 100%);
+    gap: 37px calc(75px / $container-width * 100%);
   }
 }
 
 .feature__item {
   position: relative;
   display: flex;
+  align-items: center;
   min-height: 60px;
 
   &::before {
@@ -79,8 +80,9 @@
 
   @include m.response(medium) {
     flex-direction: column;
+    align-items: flex-start;
     min-height: 280px;
-    padding-top: 40px;
+    padding-top: 36px;
 
     &::before {
       width: 80px;
@@ -91,8 +93,8 @@
       display: block;
       position: absolute;
       z-index: map-get(v.$layers, back);
-      right: 0;
-      bottom: 0;
+      right: 4px;
+      bottom: 3px;
       font-family: v.$font-main;
       font-weight: 400;
       font-size: 280px;
@@ -106,6 +108,7 @@
 
 .feature__text {
   margin: 0;
+  margin-bottom: 2px;
   margin-left: 20px;
 
   @include m.response(medium) {
@@ -113,5 +116,16 @@
     margin-top: 31px;
     font-size: v.$font-size-main-big;
     line-height: 150%;
+  }
+}
+
+.feature__break {
+  &::after {
+    content: "\A";
+    white-space: nowrap;
+
+    @include m.response(medium) {
+      white-space: pre;
+    }
   }
 }

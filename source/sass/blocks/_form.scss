@@ -2,19 +2,8 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.form {
-  @include m.response(medium) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  @include m.response(large) {
-    padding: 0;
-  }
-}
-
 .form__wrapper {
-  padding-bottom: 26px;
+  padding-bottom: 27px;
 
   @include m.response(medium) {
     padding-bottom: 75px;
@@ -35,7 +24,10 @@
 }
 
 .form__fieldset--cat {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include m.response(medium) {
     margin-bottom: 72px;
@@ -48,8 +40,8 @@
 
 .form__fieldset--goal {
   position: relative;
-  padding-top: 22px;
-  padding-bottom: 20px;
+  padding-top: 24px;
+  padding-bottom: 18px;
 
   @include m.response(medium) {
     padding: 24px 27px;
@@ -85,22 +77,26 @@
 }
 
 .form__fieldset--personal {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @include m.response(medium) {
     margin-bottom: 65px;
+  }
+
+  @include m.response(medium) {
+    margin-bottom: 67px;
   }
 }
 
 .form__fieldset--comment {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   @include m.response(medium) {
-    margin-bottom: 65px;
+    margin-bottom: 61px;
   }
 
   @include m.response(large) {
-    margin-bottom: 67;
+    margin-bottom: 63px;
   }
 }
 
@@ -143,44 +139,46 @@
 
   @include m.response(large) {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 20px 80px;
   }
 }
 
 .form__adds-info-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 13px;
+  gap: 12px;
   margin-top: -2px;
 
   @include m.response(medium) {
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    row-gap: 32px;
+    column-gap: 59px;
     margin-top: -20px;
   }
 
   @include m.response(large) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 20px 80px;
   }
 }
 
 .form__button-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 21px;
-  margin-bottom: 32px;
+  gap: 22px;
+  margin-bottom: 31px;
 
   @include m.response(medium) {
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-bottom: 72px;
+    row-gap: 32px;
+    column-gap: 59px;
+    margin-bottom: 74px;
   }
 
   @include m.response(large) {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    margin-bottom: 82px;
+    margin-bottom: 83px;
   }
 }
 
@@ -199,35 +197,35 @@
     margin-right: 13px;
 
     @include m.response(medium) {
-      margin-right: 11px;
-    }
-
-    @include m.response(large) {
-      margin-right: 13px;
-    }
-  }
-
-  &--weight {
-    margin-right: 14px;
-
-    @include m.response(medium) {
       margin-right: 17px;
     }
 
     @include m.response(large) {
-      margin-right: 14px;
+      margin-right: 17px;
+    }
+  }
+
+  &--weight {
+    margin-right: 16px;
+
+    @include m.response(medium) {
+      margin-right: 20px;
+    }
+
+    @include m.response(large) {
+      margin-right: 20px;
     }
   }
 
   &--age {
-    margin-right: 13px;
+    margin-right: 15px;
 
     @include m.response(medium) {
-      margin-right: 14px;
+      margin-right: 20px;
     }
 
     @include m.response(large) {
-      margin-right: 14px;
+      margin-right: 18px;
     }
   }
 
@@ -235,11 +233,11 @@
     margin-right: 11px;
 
     @include m.response(medium) {
-      margin-right: 18px;
+      margin-right: 20px;
     }
 
     @include m.response(large) {
-      margin-right: 20px;
+      margin-right: 22px;
     }
   }
 
@@ -264,7 +262,7 @@
   width: 100%;
   height: 151px;
   margin: 0;
-  padding: 10px 15px;
+  padding: 12px 15px;
   font-family: v.$font-main;
   font-weight: 400;
   font-size: v.$font-size-main-big;
@@ -291,7 +289,7 @@
 
   @include m.response(medium) {
     height: 174px;
-    padding: 10px 19px;
+    padding: 14px 19px;
     font-size: v.$font-size-menu-big;
 
     &:hover {
@@ -307,6 +305,7 @@
 
 .form__input-icon {
   position: absolute;
+  background-color: c.$bg-base;
 
   .form__input:not(:placeholder-shown) ~ & {
     color: c.$misc-error;
@@ -328,10 +327,15 @@
   height: 14px;
 
   @include m.response(medium) {
-    top: 19px;
-    right: 19px;
+    top: 18px;
+    right: 16px;
     width: 18px;
     height: 13px;
+  }
+
+  @include m.response(large) {
+    top: 18px;
+    right: 20px;
   }
 }
 
@@ -343,86 +347,66 @@
 
   @include m.response(medium) {
     top: 16px;
-    right: 17px;
+    right: 14px;
     width: 20px;
     height: 20px;
+  }
+
+  @include m.response(large) {
+    top: 16px;
+    right: 17px;
   }
 }
 
 .form__legend-container {
   position: relative;
-  margin-bottom: 36px;
 
   &::before {
-    display: block;
     position: absolute;
-    top: 15px;
-    left: calc(50% + 20px);
-    width: calc(100vw - 40px);
+    top: 56%;
+    display: block;
+    width: 100%;
     height: 2px;
     background-color: c.$bg-accent;
-    transform: translateX(-50%);
     content: "";
-  }
 
-  @include m.response (medium) {
-    margin-bottom: 76px;
-
-    &::before {
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: calc(50%);
-      width: calc(100vw);
-      height: 2px;
-      background-color: c.$bg-accent;
-      transform: translateX(-50%);
-      content: "";
-    }
-  }
-
-  @include m.response (large) {
-    &::before {
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: calc(50%);
-      width: calc(100vw);
-      height: 2px;
-      background-color: c.$bg-accent;
-      transform: translateX(-50%);
-      content: "";
+    @include m.response(medium) {
+      top: 60%;
     }
   }
 }
 
 .form__legend {
+  display: block;
   max-width: 300px;
   margin: 0;
-  padding: 0;
-  padding-right: 22px;
   background-color: c.$bg-base;
-
-  & .break::after {
-    content: "\A";
-    white-space: pre;
-  }
+  margin-left: calc(20px - 22px);
+  margin-bottom: 38px;
+  padding: 0 20px;
 
   @include m.response(medium) {
     max-width: 600px;
-    margin-left: -40px;
-    padding-left: 41px;
-    padding-right: 41px;
-
-    & .break::after {
-      white-space: nowrap;
-    }
+    margin-left: 30px;
+    margin-bottom: 76px;
+    padding: 0 36px;
   }
 
   @include m.response(large) {
     max-width: 650px;
-    padding-left: 40px;
-    padding-right: 35px;
+    margin-left: max(calc(110px - 40px), calc((100vw - 1220px) / 2 - 40px));
+    padding: 0 40px;
+  }
+}
+
+.form__break {
+  &::after {
+    content: "\A";
+    white-space: pre;
+
+    @include m.response(medium) {
+      white-space: nowrap;
+    }
   }
 }
 

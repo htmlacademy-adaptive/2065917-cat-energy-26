@@ -28,6 +28,10 @@
       outline: none;
       box-shadow: none;
     }
+
+    &:focus-visible {
+      outline: 2px solid c.$txt-base;
+    }
   }
 }
 
