@@ -27,7 +27,7 @@
 .header__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 65px;
   background-color: c.$bg-base;
 
@@ -64,16 +64,18 @@
   position: relative;
   z-index: map-get(v.$layers, header);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   align-self: flex-end;
   width: 100%;
-  // min-height: 65px;
-  // margin-bottom: 2px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 
   @include m.response(medium) {
     justify-content: flex-start;
     align-self: flex-start;
     width: auto;
+    padding: 0;
     transition: opacity 0.1s ease-out;
 
     &:hover {
@@ -89,7 +91,6 @@
 .header__button {
   width: 24px;
   height: 24px;
-  margin-left: auto;
   margin-bottom: 2px;
 
   @include m.response(medium) {
@@ -99,8 +100,7 @@
 
 .header__image {
   display: block;
-  margin-right: 56px;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 
   @include m.response(medium) {
     width: 174px;
@@ -115,6 +115,7 @@
 
 .header__lettering {
   display: block;
+  margin-right: 10px;
   margin-bottom: 1px;
 
   @include m.response(medium) {
